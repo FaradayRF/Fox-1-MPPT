@@ -27,7 +27,7 @@ For more information, please refer to <http://unlicense.org>
 
 1) While the AMSAT Fox-1 Maximum Power Point Tracker project is public domain 
 it is requested that you credit the images and published documents to 
-Bryce Salmi and Brenton Salmi out of appreciation if used verbatim/copied.
+Bryce Salmi @kb1lqc and Brenton Salmi @kb1lqd out of appreciation if used verbatim/copied.
 
 2) FaradayRF has no affiliation with the Radio Amateur Satellite Corporation (AMSAT).
 Bryce Salmi and Brenton Salmi helped take the RIT senior design project P13271 with
