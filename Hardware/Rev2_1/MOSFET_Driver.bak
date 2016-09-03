@@ -1,0 +1,194 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:KB1LQC
+LIBS:TL1451_MPPT_Flight_Rev1-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 36 37
+Title "Fox-1 Maximum Power Point Tracker"
+Date "30 nov 2015"
+Rev "2.0"
+Comp "The Radio Amateur Satellite Corporation"
+Comment1 "Bryce Salmi, KB1LQC"
+Comment2 "Brent Salmi, KB1LQD"
+Comment3 "Based on Rochester Institute of Technology P13271 Design"
+Comment4 ""
+$EndDescr
+Text HLabel 5100 3800 0    60   UnSpc ~ 0
+PWM-IN
+Text HLabel 7300 3800 2    60   BiDi ~ 0
+GATE-DRIVE
+$Comp
+L R_US R11
+U 1 1 534AFB8F
+P 5700 3450
+AR Path="/534A39B0/53479B00/534AEBB1/534AFB8F" Ref="R11"  Part="1" 
+AR Path="/534CCB8B/53479B00/534AEBB1/534AFB8F" Ref="R50"  Part="1" 
+AR Path="/534CD3E7/53479B00/534AEBB1/534AFB8F" Ref="R79"  Part="1" 
+AR Path="/534CD3EE/53479B00/534AEBB1/534AFB8F" Ref="R108"  Part="1" 
+AR Path="/534CE2A1/53479B00/534AEBB1/534AFB8F" Ref="R137"  Part="1" 
+AR Path="/534CE2A8/53479B00/534AEBB1/534AFB8F" Ref="R166"  Part="1" 
+F 0 "R137" H 5825 3625 50  0000 C CNN
+F 1 "2K" H 5800 3550 50  0000 C CNN
+F 2 "R0402" H 5875 3475 50  0000 C CNN
+F 3 "" H 5700 3450 50  0000 C CNN
+F 4 "1%" H 5800 3400 50  0000 C CNN "Tolerance"
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+Text HLabel 5100 2750 0    60   Input ~ 0
+Vpanel
+Wire Wire Line
+	5700 2750 5700 3250
+Wire Wire Line
+	5700 3650 5700 3800
+Wire Wire Line
+	5100 3800 6700 3800
+Text Notes 4675 4000 0    60   ~ 0
+TL1451 NPN open collector
+Wire Wire Line
+	6800 3500 6700 3500
+Wire Wire Line
+	6700 3500 6700 4100
+Wire Wire Line
+	6700 4100 6800 4100
+Connection ~ 6700 3800
+Connection ~ 5700 3800
+Wire Wire Line
+	7100 3700 7100 3900
+Wire Wire Line
+	7100 4300 7100 4450
+$Comp
+L GND #PWR047
+U 1 1 534B03B4
+P 7100 4450
+AR Path="/534A39B0/53479B00/534AEBB1/534B03B4" Ref="#PWR047"  Part="1" 
+AR Path="/534CCB8B/53479B00/534AEBB1/534B03B4" Ref="#PWR0119"  Part="1" 
+AR Path="/534CD3E7/53479B00/534AEBB1/534B03B4" Ref="#PWR0151"  Part="1" 
+AR Path="/534CD3EE/53479B00/534AEBB1/534B03B4" Ref="#PWR0183"  Part="1" 
+AR Path="/534CE2A1/53479B00/534AEBB1/534B03B4" Ref="#PWR0253"  Part="1" 
+AR Path="/534CE2A8/53479B00/534AEBB1/534B03B4" Ref="#PWR0215"  Part="1" 
+F 0 "#PWR0253" H 7100 4450 30  0001 C CNN
+F 1 "GND" H 7100 4380 30  0001 C CNN
+F 2 "" H 7100 4450 60  0000 C CNN
+F 3 "" H 7100 4450 60  0000 C CNN
+	1    7100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3800 7100 3800
+Connection ~ 7100 3800
+Wire Notes Line
+	4300 2450 8400 2450
+Wire Notes Line
+	8400 2450 8400 4750
+Wire Notes Line
+	8400 4750 4300 4750
+Wire Notes Line
+	4300 4750 4300 2450
+Text Notes 4925 2400 0    120  Italic 24
+TOTEM POLE MOSFET DRIVER
+$Comp
+L MMDT2227M Q6
+U 1 1 534F9CD4
+P 7000 3800
+AR Path="/534CD3E7/53479B00/534AEBB1/534F9CD4" Ref="Q6"  Part="1" 
+AR Path="/534A39B0/53479B00/534AEBB1/534F9CD4" Ref="Q2"  Part="1" 
+AR Path="/534CCB8B/53479B00/534AEBB1/534F9CD4" Ref="Q3"  Part="1" 
+AR Path="/534CD3EE/53479B00/534AEBB1/534F9CD4" Ref="Q7"  Part="1" 
+AR Path="/534CE2A1/53479B00/534AEBB1/534F9CD4" Ref="Q10"  Part="1" 
+AR Path="/534CE2A8/53479B00/534AEBB1/534F9CD4" Ref="Q11"  Part="1" 
+F 0 "Q10" H 6900 4325 50  0000 R CNN
+F 1 "MMDT2227M" H 6900 4250 50  0000 R CNN
+F 2 "SOT26" H 6775 4175 50  0000 C CNN
+F 3 "" H 7000 4100 50  0000 C CNN
+	1    7000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C46
+U 1 1 54C69C76
+P 7500 3000
+AR Path="/534A39B0/53479B00/534AEBB1/54C69C76" Ref="C46"  Part="1" 
+AR Path="/534CD3E7/53479B00/534AEBB1/54C69C76" Ref="C55"  Part="1" 
+AR Path="/534CCB8B/53479B00/534AEBB1/54C69C76" Ref="C51"  Part="1" 
+AR Path="/534CD3EE/53479B00/534AEBB1/54C69C76" Ref="C58"  Part="1" 
+AR Path="/534CE2A8/53479B00/534AEBB1/54C69C76" Ref="C68"  Part="1" 
+AR Path="/534CE2A1/53479B00/534AEBB1/54C69C76" Ref="C73"  Part="1" 
+F 0 "C73" H 7600 3075 50  0000 L CNN
+F 1 "1uF" H 7600 3000 50  0000 L CNN
+F 2 "C0603" H 7725 2925 50  0000 C CNN
+F 3 "" H 7500 3000 60  0000 C CNN
+F 4 "16V" H 7675 2850 50  0000 C CNN "Rating"
+	1    7500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3200 7500 3350
+$Comp
+L GND #PWR048
+U 1 1 54C69C84
+P 7500 3350
+AR Path="/534A39B0/53479B00/534AEBB1/54C69C84" Ref="#PWR048"  Part="1" 
+AR Path="/534CD3E7/53479B00/534AEBB1/54C69C84" Ref="#PWR0152"  Part="1" 
+AR Path="/534CCB8B/53479B00/534AEBB1/54C69C84" Ref="#PWR0120"  Part="1" 
+AR Path="/534CD3EE/53479B00/534AEBB1/54C69C84" Ref="#PWR0184"  Part="1" 
+AR Path="/534CE2A8/53479B00/534AEBB1/54C69C84" Ref="#PWR0216"  Part="1" 
+AR Path="/534CE2A1/53479B00/534AEBB1/54C69C84" Ref="#PWR0254"  Part="1" 
+F 0 "#PWR0254" H 7500 3350 30  0001 C CNN
+F 1 "GND" H 7500 3280 30  0001 C CNN
+F 2 "" H 7500 3350 60  0000 C CNN
+F 3 "" H 7500 3350 60  0000 C CNN
+	1    7500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2750 7500 2750
+Wire Wire Line
+	7500 2750 7500 2800
+Connection ~ 7100 2750
+Connection ~ 5700 2750
+Wire Wire Line
+	7100 2750 7100 3300
+Text Notes 5125 2725 0    60   Italic 0
+VIN MAX = 6.5V
+Text Notes 7250 3950 0    60   Italic 0
+V MAX = 6.5V - VCEsat\nV Min = GND + VCEsat
+Text Notes 675  7200 0    120  ~ 24
+NOTES
+Text Notes 725  7400 0    60   ~ 0
+* This MPPT implements a set-point constant voltage tracking algorithm based on panel temperature.\n* RIT MPPT Team: Brenton Salmi (KB1LQD), Bryce Salmi (KB1LQC), Ian MacKenzie (KB3OCF), Daniel Corriero.\n* Parts not yet NASA derated.
+Text Notes 4900 3475 0    50   Italic 0
+Max Pdiss = 21mW
+$EndSCHEMATC

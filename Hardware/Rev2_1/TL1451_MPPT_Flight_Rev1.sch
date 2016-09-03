@@ -1,0 +1,1305 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:KB1LQC
+LIBS:TL1451_MPPT_Flight_Rev1-cache
+EELAYER 27 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 37
+Title "Fox-1 Maximum Power Point Tracker"
+Date "30 nov 2015"
+Rev "2.0"
+Comp "The Radio Amateur Satellite Corporation"
+Comment1 "Bryce Salmi, KB1LQC"
+Comment2 "Brent Salmi, KB1LQD"
+Comment3 "Based on Rochester Institute of Technology P13271 Design"
+Comment4 ""
+$EndDescr
+$Sheet
+S 3550 1650 1000 600 
+U 534A39B0
+F0 "MPPT_String_X+" 50
+F1 "MPPT_String.sch" 50
+F2 "Vpanel+" U L 3550 2150 60 
+F3 "Vpanel-" U R 4550 2150 60 
+F4 "RTD+" U L 3550 1750 60 
+F5 "RTD-" U L 3550 1850 60 
+F6 "Vtemp" U R 4550 1750 60 
+F7 "~SolarSafe~" U R 4550 1850 60 
+F8 "MPPT-COMMON" O R 4550 2000 60 
+$EndSheet
+$Sheet
+S 8350 3400 1450 400 
+U 534B2823
+F0 "Connectors" 50
+F1 "Connectors.sch" 50
+F2 "BUS[1..60]" B L 8350 3600 60 
+$EndSheet
+$Sheet
+S 8350 2400 1450 400 
+U 534B2826
+F0 "ADC Channels" 50
+F1 "ADC_Channels.sch" 50
+F2 "ADC_0_[0..7]" I L 8350 2550 60 
+F3 "ADC_1_[0..7]" I L 8350 2650 60 
+F4 "BUS[1..60]" B R 9800 2600 60 
+$EndSheet
+$Sheet
+S 5900 2300 1300 700 
+U 5469586C
+F0 "Panel Voltage Scaling" 50
+F1 "VpanelScaling.sch" 50
+F2 "Vpanel-X" I L 5900 2500 60 
+F3 "Vpanel+X" I L 5900 2400 60 
+F4 "Vpanel+Y" I L 5900 2600 60 
+F5 "Vpanel-Y" I L 5900 2700 60 
+F6 "Vpanel+Z" I L 5900 2800 60 
+F7 "Vpanel-Z" I L 5900 2900 60 
+F8 "Vsense+X" O R 7200 2400 60 
+F9 "Vsense+Y" O R 7200 2600 60 
+F10 "Vsense-X" O R 7200 2500 60 
+F11 "Vsense-Y" O R 7200 2700 60 
+F12 "Vsense+Z" O R 7200 2800 60 
+F13 "Vsense-Z" O R 7200 2900 60 
+$EndSheet
+$Comp
+L CONN_5X2 P1
+U 1 1 534C9E96
+P 2000 1950
+F 0 "P1" H 2000 2250 60  0000 C CNN
+F 1 "CONN_5X2" V 2000 1950 50  0001 C CNN
+F 2 "MEC1-105-02-L-D-NP-A" H 2200 1650 60  0000 C CNN
+F 3 "" H 2000 1950 60  0000 C CNN
+	1    2000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 534C9E9C
+P 1500 2300
+F 0 "#PWR01" H 1500 2300 30  0001 C CNN
+F 1 "GND" H 1500 2230 30  0001 C CNN
+F 2 "" H 1500 2300 60  0000 C CNN
+F 3 "" H 1500 2300 60  0000 C CNN
+	1    1500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 534C9EB1
+P 2650 2000
+F 0 "#PWR02" H 2650 2000 30  0001 C CNN
+F 1 "GND" H 2650 1930 30  0001 C CNN
+F 2 "" H 2650 2000 60  0000 C CNN
+F 3 "" H 2650 2000 60  0000 C CNN
+	1    2650 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 534CA9F0
+P 3400 1900
+F 0 "#PWR03" H 3400 1900 30  0001 C CNN
+F 1 "GND" H 3400 1830 30  0001 C CNN
+F 2 "" H 3400 1900 60  0000 C CNN
+F 3 "" H 3400 1900 60  0000 C CNN
+	1    3400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 534CAA02
+P 4700 2200
+F 0 "#PWR04" H 4700 2200 30  0001 C CNN
+F 1 "GND" H 4700 2130 30  0001 C CNN
+F 2 "" H 4700 2200 60  0000 C CNN
+F 3 "" H 4700 2200 60  0000 C CNN
+	1    4700 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1750 1500 2300
+Wire Wire Line
+	1500 1750 1600 1750
+Wire Wire Line
+	1600 1850 1500 1850
+Connection ~ 1500 1850
+Wire Wire Line
+	1600 1950 1500 1950
+Connection ~ 1500 1950
+Wire Wire Line
+	1600 2050 1500 2050
+Connection ~ 1500 2050
+Wire Wire Line
+	1600 2150 1500 2150
+Connection ~ 1500 2150
+Wire Wire Line
+	2400 1850 2500 1850
+Wire Wire Line
+	2500 1850 2500 1950
+Wire Wire Line
+	2400 1950 2650 1950
+Wire Wire Line
+	2650 1950 2650 2000
+Connection ~ 2500 1950
+Wire Wire Line
+	2400 1750 3550 1750
+Wire Wire Line
+	2400 2150 3550 2150
+Wire Wire Line
+	2400 2050 2500 2050
+Wire Wire Line
+	2500 2050 2500 2150
+Connection ~ 2500 2150
+Wire Wire Line
+	3550 1850 3400 1850
+Wire Wire Line
+	3400 1850 3400 1900
+Wire Wire Line
+	4550 2150 4700 2150
+Wire Wire Line
+	4700 2150 4700 2200
+Text Notes 500  2050 0    120  ~ 24
+X+ PANEL
+$Comp
+L CONN_5X2 P2
+U 1 1 534CC3EC
+P 2000 2750
+F 0 "P2" H 2000 3050 60  0000 C CNN
+F 1 "CONN_5X2" V 2000 2750 50  0001 C CNN
+F 2 "MEC1-105-02-L-D-NP-A" H 2200 2450 60  0000 C CNN
+F 3 "" H 2000 2750 60  0000 C CNN
+	1    2000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 534CC3F2
+P 1500 3100
+F 0 "#PWR05" H 1500 3100 30  0001 C CNN
+F 1 "GND" H 1500 3030 30  0001 C CNN
+F 2 "" H 1500 3100 60  0000 C CNN
+F 3 "" H 1500 3100 60  0000 C CNN
+	1    1500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 534CC3F8
+P 2650 2800
+F 0 "#PWR06" H 2650 2800 30  0001 C CNN
+F 1 "GND" H 2650 2730 30  0001 C CNN
+F 2 "" H 2650 2800 60  0000 C CNN
+F 3 "" H 2650 2800 60  0000 C CNN
+	1    2650 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2550 1500 3100
+Wire Wire Line
+	1500 2550 1600 2550
+Wire Wire Line
+	1600 2650 1500 2650
+Connection ~ 1500 2650
+Wire Wire Line
+	1600 2750 1500 2750
+Connection ~ 1500 2750
+Wire Wire Line
+	1600 2850 1500 2850
+Connection ~ 1500 2850
+Wire Wire Line
+	1600 2950 1500 2950
+Connection ~ 1500 2950
+Wire Wire Line
+	2400 2650 2500 2650
+Wire Wire Line
+	2500 2650 2500 2750
+Wire Wire Line
+	2400 2750 2650 2750
+Wire Wire Line
+	2650 2750 2650 2800
+Connection ~ 2500 2750
+Wire Wire Line
+	2400 2550 3550 2550
+Wire Wire Line
+	2400 2950 3550 2950
+Wire Wire Line
+	2400 2850 2500 2850
+Wire Wire Line
+	2500 2850 2500 2950
+Connection ~ 2500 2950
+Text Notes 500  2850 0    120  ~ 24
+X- PANEL
+$Sheet
+S 3550 2450 1000 600 
+U 534CCB8B
+F0 "MPPT_String_X-" 50
+F1 "MPPT_String.sch" 50
+F2 "Vpanel+" U L 3550 2950 60 
+F3 "Vpanel-" U R 4550 2950 60 
+F4 "RTD+" U L 3550 2550 60 
+F5 "RTD-" U L 3550 2650 60 
+F6 "Vtemp" U R 4550 2550 60 
+F7 "~SolarSafe~" U R 4550 2650 60 
+F8 "MPPT-COMMON" O R 4550 2800 60 
+$EndSheet
+$Sheet
+S 3550 3550 1000 600 
+U 534CD3E7
+F0 "MPPT_String_Y+" 50
+F1 "MPPT_String.sch" 50
+F2 "Vpanel+" U L 3550 4050 60 
+F3 "Vpanel-" U R 4550 4050 60 
+F4 "RTD+" U L 3550 3650 60 
+F5 "RTD-" U L 3550 3750 60 
+F6 "Vtemp" U R 4550 3650 60 
+F7 "~SolarSafe~" U R 4550 3750 60 
+F8 "MPPT-COMMON" O R 4550 3900 60 
+$EndSheet
+$Sheet
+S 3550 4350 1000 600 
+U 534CD3EE
+F0 "MPPT_String_Y-" 50
+F1 "MPPT_String.sch" 50
+F2 "Vpanel+" U L 3550 4850 60 
+F3 "Vpanel-" U R 4550 4850 60 
+F4 "RTD+" U L 3550 4450 60 
+F5 "RTD-" U L 3550 4550 60 
+F6 "Vtemp" U R 4550 4450 60 
+F7 "~SolarSafe~" U R 4550 4550 60 
+F8 "MPPT-COMMON" O R 4550 4700 60 
+$EndSheet
+$Sheet
+S 3550 6350 1000 600 
+U 534CE2A8
+F0 "MPPT_String_Z-" 50
+F1 "MPPT_String.sch" 50
+F2 "Vpanel+" U L 3550 6850 60 
+F3 "Vpanel-" U R 4550 6850 60 
+F4 "RTD+" U L 3550 6450 60 
+F5 "RTD-" U L 3550 6550 60 
+F6 "Vtemp" U R 4550 6450 60 
+F7 "~SolarSafe~" U R 4550 6550 60 
+F8 "MPPT-COMMON" O R 4550 6700 60 
+$EndSheet
+$Comp
+L CONN_5X2 P3
+U 1 1 534CEF83
+P 2000 3850
+F 0 "P3" H 2000 4150 60  0000 C CNN
+F 1 "CONN_5X2" V 2000 3850 50  0001 C CNN
+F 2 "MEC1-105-02-L-D-NP-A" H 2200 3550 60  0000 C CNN
+F 3 "" H 2000 3850 60  0000 C CNN
+	1    2000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 534CEF89
+P 1500 4200
+F 0 "#PWR07" H 1500 4200 30  0001 C CNN
+F 1 "GND" H 1500 4130 30  0001 C CNN
+F 2 "" H 1500 4200 60  0000 C CNN
+F 3 "" H 1500 4200 60  0000 C CNN
+	1    1500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 534CEF8F
+P 2800 3850
+F 0 "#PWR08" H 2800 3850 30  0001 C CNN
+F 1 "GND" H 2800 3780 30  0001 C CNN
+F 2 "" H 2800 3850 60  0000 C CNN
+F 3 "" H 2800 3850 60  0000 C CNN
+	1    2800 3850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1500 3650 1500 4200
+Wire Wire Line
+	1500 3650 1600 3650
+Wire Wire Line
+	1600 3750 1500 3750
+Connection ~ 1500 3750
+Wire Wire Line
+	1600 3850 1500 3850
+Connection ~ 1500 3850
+Wire Wire Line
+	1600 3950 1500 3950
+Connection ~ 1500 3950
+Wire Wire Line
+	1600 4050 1500 4050
+Connection ~ 1500 4050
+Wire Wire Line
+	2400 3850 2800 3850
+Wire Wire Line
+	2400 3650 3550 3650
+Wire Wire Line
+	2400 4050 3550 4050
+Text Notes 500  3950 0    120  ~ 24
+Y+ PANEL
+$Comp
+L CONN_5X2 P4
+U 1 1 534CEFAA
+P 2000 4650
+F 0 "P4" H 2000 4950 60  0000 C CNN
+F 1 "CONN_5X2" V 2000 4650 50  0001 C CNN
+F 2 "MEC1-105-02-L-D-NP-A" H 2200 4350 60  0000 C CNN
+F 3 "" H 2000 4650 60  0000 C CNN
+	1    2000 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 534CEFB0
+P 1500 5000
+F 0 "#PWR09" H 1500 5000 30  0001 C CNN
+F 1 "GND" H 1500 4930 30  0001 C CNN
+F 2 "" H 1500 5000 60  0000 C CNN
+F 3 "" H 1500 5000 60  0000 C CNN
+	1    1500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 534CEFB6
+P 2800 4650
+F 0 "#PWR010" H 2800 4650 30  0001 C CNN
+F 1 "GND" H 2800 4580 30  0001 C CNN
+F 2 "" H 2800 4650 60  0000 C CNN
+F 3 "" H 2800 4650 60  0000 C CNN
+	1    2800 4650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1500 4450 1500 5000
+Wire Wire Line
+	1500 4450 1600 4450
+Wire Wire Line
+	1600 4550 1500 4550
+Connection ~ 1500 4550
+Wire Wire Line
+	1600 4650 1500 4650
+Connection ~ 1500 4650
+Wire Wire Line
+	1600 4750 1500 4750
+Connection ~ 1500 4750
+Wire Wire Line
+	1600 4850 1500 4850
+Connection ~ 1500 4850
+Wire Wire Line
+	2400 4550 2850 4550
+Wire Wire Line
+	2400 4650 2800 4650
+Wire Wire Line
+	2400 4450 3550 4450
+Wire Wire Line
+	2400 4850 3550 4850
+Wire Wire Line
+	2400 4750 2850 4750
+Text Notes 500  4750 0    120  ~ 24
+Y- PANEL
+$Comp
+L GND #PWR011
+U 1 1 534D0342
+P 3400 2700
+F 0 "#PWR011" H 3400 2700 30  0001 C CNN
+F 1 "GND" H 3400 2630 30  0001 C CNN
+F 2 "" H 3400 2700 60  0000 C CNN
+F 3 "" H 3400 2700 60  0000 C CNN
+	1    3400 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2650 3400 2650
+Wire Wire Line
+	3400 2650 3400 2700
+$Comp
+L GND #PWR012
+U 1 1 534D047C
+P 3400 3800
+F 0 "#PWR012" H 3400 3800 30  0001 C CNN
+F 1 "GND" H 3400 3730 30  0001 C CNN
+F 2 "" H 3400 3800 60  0000 C CNN
+F 3 "" H 3400 3800 60  0000 C CNN
+	1    3400 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3750 3400 3750
+Wire Wire Line
+	3400 3750 3400 3800
+$Comp
+L GND #PWR013
+U 1 1 534D0550
+P 3400 4600
+F 0 "#PWR013" H 3400 4600 30  0001 C CNN
+F 1 "GND" H 3400 4530 30  0001 C CNN
+F 2 "" H 3400 4600 60  0000 C CNN
+F 3 "" H 3400 4600 60  0000 C CNN
+	1    3400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4550 3400 4550
+Wire Wire Line
+	3400 4550 3400 4600
+$Comp
+L GND #PWR014
+U 1 1 534D0624
+P 4700 3000
+F 0 "#PWR014" H 4700 3000 30  0001 C CNN
+F 1 "GND" H 4700 2930 30  0001 C CNN
+F 2 "" H 4700 3000 60  0000 C CNN
+F 3 "" H 4700 3000 60  0000 C CNN
+	1    4700 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2950 4700 2950
+Wire Wire Line
+	4700 2950 4700 3000
+$Comp
+L GND #PWR015
+U 1 1 534D06F8
+P 4700 4100
+F 0 "#PWR015" H 4700 4100 30  0001 C CNN
+F 1 "GND" H 4700 4030 30  0001 C CNN
+F 2 "" H 4700 4100 60  0000 C CNN
+F 3 "" H 4700 4100 60  0000 C CNN
+	1    4700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4050 4700 4050
+Wire Wire Line
+	4700 4050 4700 4100
+$Comp
+L GND #PWR016
+U 1 1 534D07CC
+P 4700 4900
+F 0 "#PWR016" H 4700 4900 30  0001 C CNN
+F 1 "GND" H 4700 4830 30  0001 C CNN
+F 2 "" H 4700 4900 60  0000 C CNN
+F 3 "" H 4700 4900 60  0000 C CNN
+	1    4700 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4850 4700 4850
+Wire Wire Line
+	4700 4850 4700 4900
+$Comp
+L GND #PWR017
+U 1 1 534D09D2
+P 4700 6100
+F 0 "#PWR017" H 4700 6100 30  0001 C CNN
+F 1 "GND" H 4700 6030 30  0001 C CNN
+F 2 "" H 4700 6100 60  0000 C CNN
+F 3 "" H 4700 6100 60  0000 C CNN
+	1    4700 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6050 4700 6050
+Wire Wire Line
+	4700 6050 4700 6100
+$Comp
+L GND #PWR018
+U 1 1 534D09DA
+P 4700 6900
+F 0 "#PWR018" H 4700 6900 30  0001 C CNN
+F 1 "GND" H 4700 6830 30  0001 C CNN
+F 2 "" H 4700 6900 60  0000 C CNN
+F 3 "" H 4700 6900 60  0000 C CNN
+	1    4700 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6850 4700 6850
+Wire Wire Line
+	4700 6850 4700 6900
+Wire Wire Line
+	5200 6700 4550 6700
+Wire Wire Line
+	5200 2000 5200 6700
+Wire Wire Line
+	5200 2000 4550 2000
+Wire Wire Line
+	4550 2800 5200 2800
+Connection ~ 5200 2800
+Wire Wire Line
+	4550 3900 5200 3900
+Connection ~ 5200 3900
+Wire Wire Line
+	4550 4700 5200 4700
+Connection ~ 5200 4700
+Wire Wire Line
+	4550 5900 5200 5900
+Connection ~ 5200 5900
+Wire Bus Line
+	7700 3600 8350 3600
+Text Label 7700 3600 0    60   ~ 0
+BUS[1.60]
+Wire Bus Line
+	1500 5550 2250 5550
+Text Label 1500 5550 0    60   ~ 0
+BUS[1..60]
+$Sheet
+S 6200 5050 1100 750 
+U 534D27DA
+F0 "Current Sense" 50
+F1 "Current_Sense.sch" 50
+F2 "ADC_0_[0..7]" I L 6200 5600 60 
+F3 "ADC_1_[0..7]" I L 6200 5700 60 
+F4 "BUS[1..60]" B L 6200 5500 60 
+F5 "VBATT" O R 7300 5250 60 
+F6 "I_SENSE+" I L 6200 5250 60 
+$EndSheet
+Wire Wire Line
+	5200 5250 6200 5250
+Text Label 5300 5250 0    60   ~ 0
+VMPPT
+Entry Wire Line
+	2250 5550 2350 5650
+Entry Wire Line
+	2250 5950 2350 6050
+Wire Bus Line
+	2250 5550 2250 5850
+Wire Bus Line
+	2250 5750 2250 5950
+Wire Wire Line
+	3550 5650 2350 5650
+Wire Wire Line
+	3550 6050 2350 6050
+$Comp
+L GND #PWR019
+U 1 1 534E8E62
+P 3400 5800
+F 0 "#PWR019" H 3400 5800 30  0001 C CNN
+F 1 "GND" H 3400 5730 30  0001 C CNN
+F 2 "" H 3400 5800 60  0000 C CNN
+F 3 "" H 3400 5800 60  0000 C CNN
+	1    3400 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 5750 3400 5750
+Wire Wire Line
+	3400 5750 3400 5800
+Text Label 2400 5650 0    60   ~ 0
+BUS41
+Text Label 2400 6050 0    60   ~ 0
+BUS45
+Wire Bus Line
+	1500 6350 2250 6350
+Text Label 1500 6350 0    60   ~ 0
+BUS[1..60]
+Entry Wire Line
+	2250 6350 2350 6450
+Entry Wire Line
+	2250 6750 2350 6850
+Wire Bus Line
+	2250 6350 2250 6650
+Wire Bus Line
+	2250 6550 2250 6750
+Wire Wire Line
+	3550 6450 2350 6450
+Wire Wire Line
+	3550 6850 2350 6850
+$Comp
+L GND #PWR020
+U 1 1 534E935E
+P 3400 6600
+F 0 "#PWR020" H 3400 6600 30  0001 C CNN
+F 1 "GND" H 3400 6530 30  0001 C CNN
+F 2 "" H 3400 6600 60  0000 C CNN
+F 3 "" H 3400 6600 60  0000 C CNN
+	1    3400 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 6550 3400 6550
+Wire Wire Line
+	3400 6550 3400 6600
+Text Label 2400 6450 0    60   ~ 0
+BUS43
+Text Label 2400 6850 0    60   ~ 0
+BUS47
+Text Notes 500  5600 0    120  ~ 24
+Z+ PANEL
+Text Notes 500  6400 0    120  ~ 24
+Z- PANEL
+Wire Bus Line
+	9800 2600 10450 2600
+Text Label 10450 2600 2    60   ~ 0
+BUS[1.60]
+Wire Wire Line
+	7300 5250 9550 5250
+Text Label 7650 5250 0    60   ~ 0
+VBATT
+Wire Bus Line
+	9650 4850 10300 4850
+Text Label 10300 4850 2    60   ~ 0
+BUS[1.60]
+Entry Wire Line
+	9550 4950 9650 4850
+Entry Wire Line
+	9550 5050 9650 4950
+Entry Wire Line
+	9550 5150 9650 5050
+Entry Wire Line
+	9550 5250 9650 5150
+Wire Wire Line
+	9150 5150 9550 5150
+Wire Wire Line
+	9150 4950 9150 5250
+Connection ~ 9150 5250
+Wire Wire Line
+	9150 5050 9550 5050
+Connection ~ 9150 5150
+Wire Wire Line
+	9550 4950 9150 4950
+Connection ~ 9150 5050
+Wire Bus Line
+	9650 4850 9650 5150
+Text Label 9200 5250 0    60   ~ 0
+BUS60
+Text Label 9200 5050 0    60   ~ 0
+BUS58
+Text Label 9200 5150 0    60   ~ 0
+BUS59
+Text Label 9200 4950 0    60   ~ 0
+BUS57
+Text Label 5550 5500 0    60   ~ 0
+BUS[1.60]
+Wire Bus Line
+	6200 5500 5550 5500
+Text Label 7700 2550 0    60   ~ 0
+ADC_0_[0..7]
+Text Label 7700 2650 0    60   ~ 0
+ADC_1_[0..7]
+Wire Bus Line
+	7700 2650 8350 2650
+Wire Bus Line
+	8350 2550 7700 2550
+Text Label 5550 5600 0    60   ~ 0
+ADC_0_[0..7]
+Text Label 5550 5700 0    60   ~ 0
+ADC_1_[0..7]
+Wire Bus Line
+	5550 5700 6200 5700
+Wire Bus Line
+	6200 5600 5550 5600
+Wire Wire Line
+	7650 1800 7050 1800
+Wire Wire Line
+	7050 1700 7650 1700
+Wire Wire Line
+	7650 1600 7050 1600
+Wire Wire Line
+	7050 1500 7650 1500
+Wire Wire Line
+	7650 1400 7050 1400
+Wire Wire Line
+	7050 1300 7650 1300
+Wire Wire Line
+	7650 1200 7050 1200
+Wire Bus Line
+	8550 900  7750 900 
+Text Label 7050 1800 0    60   ~ 0
+ADC_0_0
+Text Label 8450 900  2    60   ~ 0
+ADC_0_[0..7]
+Text Label 7050 1700 0    60   ~ 0
+ADC_0_1
+Text Label 7050 1600 0    60   ~ 0
+ADC_0_2
+Text Label 7050 1500 0    60   ~ 0
+ADC_0_3
+Text Label 7050 1400 0    60   ~ 0
+ADC_0_4
+Text Label 7050 1300 0    60   ~ 0
+ADC_0_5
+Text Label 7050 1200 0    60   ~ 0
+ADC_0_6
+Entry Wire Line
+	7650 1200 7750 1100
+Entry Wire Line
+	7650 1300 7750 1200
+Entry Wire Line
+	7650 1400 7750 1300
+Entry Wire Line
+	7650 1500 7750 1400
+Entry Wire Line
+	7650 1600 7750 1500
+Entry Wire Line
+	7650 1700 7750 1600
+Entry Wire Line
+	7650 1800 7750 1700
+Wire Bus Line
+	7750 900  7750 1700
+Wire Wire Line
+	9250 1100 8650 1100
+Wire Wire Line
+	8650 1700 9250 1700
+Wire Wire Line
+	9250 1600 8650 1600
+Wire Wire Line
+	8650 1500 9250 1500
+Wire Wire Line
+	9250 1400 8650 1400
+Wire Wire Line
+	8650 1300 9250 1300
+Wire Wire Line
+	9250 1200 8650 1200
+Wire Bus Line
+	10150 900  9350 900 
+Text Label 8650 1100 0    60   ~ 0
+ADC_1_7
+Text Label 10050 900  2    60   ~ 0
+ADC_1_[0..7]
+Text Label 8650 1700 0    60   ~ 0
+ADC_1_1
+Text Label 8650 1600 0    60   ~ 0
+ADC_1_2
+Text Label 8650 1500 0    60   ~ 0
+ADC_1_3
+Text Label 8650 1400 0    60   ~ 0
+ADC_1_4
+Text Label 8650 1300 0    60   ~ 0
+ADC_1_5
+Text Label 8650 1200 0    60   ~ 0
+ADC_1_6
+Entry Wire Line
+	9250 1100 9350 1000
+Entry Wire Line
+	9250 1200 9350 1100
+Entry Wire Line
+	9250 1300 9350 1200
+Entry Wire Line
+	9250 1400 9350 1300
+Entry Wire Line
+	9250 1500 9350 1400
+Entry Wire Line
+	9250 1600 9350 1500
+Entry Wire Line
+	9250 1700 9350 1600
+Wire Bus Line
+	9350 900  9350 1700
+Text Label 5050 1750 2    60   ~ 0
+ADC_1_3
+Text Label 5050 3650 2    60   ~ 0
+ADC_1_5
+Text Label 5050 2550 2    60   ~ 0
+ADC_1_6
+Text Label 5050 5650 2    60   ~ 0
+ADC_1_2
+Text Label 5050 4450 2    60   ~ 0
+ADC_1_1
+Wire Wire Line
+	5050 1750 4550 1750
+Wire Wire Line
+	5050 5650 4550 5650
+Wire Wire Line
+	5050 4450 4550 4450
+Wire Wire Line
+	5050 3650 4550 3650
+Wire Wire Line
+	5050 6450 4550 6450
+Wire Wire Line
+	5050 2550 4550 2550
+Wire Notes Line
+	6800 650  10450 650 
+Wire Notes Line
+	10450 650  10450 1950
+Wire Notes Line
+	10450 1950 6800 1950
+Wire Notes Line
+	6800 1950 6800 650 
+Text Notes 9050 650  2    60   ~ 12
+ADC Bus Breakouts
+$Comp
+L GND #PWR021
+U 1 1 534FD0F7
+P 10150 5850
+F 0 "#PWR021" H 10150 5850 30  0001 C CNN
+F 1 "GND" H 10150 5780 30  0001 C CNN
+F 2 "" H 10150 5850 60  0000 C CNN
+F 3 "" H 10150 5850 60  0000 C CNN
+	1    10150 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG022
+U 1 1 534FD10B
+P 10150 5600
+F 0 "#FLG022" H 10150 5695 30  0001 C CNN
+F 1 "PWR_FLAG" H 10150 5780 30  0000 C CNN
+F 2 "" H 10150 5600 60  0000 C CNN
+F 3 "" H 10150 5600 60  0000 C CNN
+	1    10150 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 5600 10150 5850
+Text Notes 9850 5350 0    60   ~ 0
+GND is driven
+$Comp
+L PWR_FLAG #FLG023
+U 1 1 535010A8
+P 5800 5150
+F 0 "#FLG023" H 5800 5245 30  0001 C CNN
+F 1 "PWR_FLAG" H 5800 5330 30  0000 C CNN
+F 2 "" H 5800 5150 60  0000 C CNN
+F 3 "" H 5800 5150 60  0000 C CNN
+	1    5800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 5150 5800 5250
+$Comp
+L PWR_FLAG #FLG024
+U 1 1 535013EF
+P 8150 5150
+F 0 "#FLG024" H 8150 5245 30  0001 C CNN
+F 1 "PWR_FLAG" H 8150 5330 30  0000 C CNN
+F 2 "" H 8150 5150 60  0000 C CNN
+F 3 "" H 8150 5150 60  0000 C CNN
+	1    8150 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5150 8150 5250
+Connection ~ 8150 5250
+Connection ~ 5800 5250
+$Comp
+L CONN_1 P7
+U 1 1 536899D9
+P 9600 6500
+F 0 "P7" H 9680 6500 40  0000 L CNN
+F 1 "CONN_1" H 9600 6555 30  0001 C CNN
+F 2 "FOX_Mounting_Hole" H 9600 6500 60  0001 C CNN
+F 3 "" H 9600 6500 60  0000 C CNN
+	1    9600 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P8
+U 1 1 536899E6
+P 9800 6500
+F 0 "P8" H 9880 6500 40  0000 L CNN
+F 1 "CONN_1" H 9800 6555 30  0001 C CNN
+F 2 "FOX_Mounting_Hole" H 9800 6500 60  0001 C CNN
+F 3 "" H 9800 6500 60  0000 C CNN
+	1    9800 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P9
+U 1 1 536899EC
+P 10000 6500
+F 0 "P9" H 10080 6500 40  0000 L CNN
+F 1 "CONN_1" H 10000 6555 30  0001 C CNN
+F 2 "FOX_Mounting_Hole" H 10000 6500 60  0001 C CNN
+F 3 "" H 10000 6500 60  0000 C CNN
+	1    10000 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P10
+U 1 1 536899F2
+P 10200 6500
+F 0 "P10" H 10280 6500 40  0000 L CNN
+F 1 "CONN_1" H 10200 6555 30  0001 C CNN
+F 2 "FOX_Mounting_Hole" H 10200 6500 60  0001 C CNN
+F 3 "" H 10200 6500 60  0000 C CNN
+	1    10200 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR025
+U 1 1 53689B0E
+P 9600 6750
+F 0 "#PWR025" H 9600 6750 30  0001 C CNN
+F 1 "GND" H 9600 6680 30  0001 C CNN
+F 2 "" H 9600 6750 60  0000 C CNN
+F 3 "" H 9600 6750 60  0000 C CNN
+	1    9600 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR026
+U 1 1 53689B1B
+P 9800 6750
+F 0 "#PWR026" H 9800 6750 30  0001 C CNN
+F 1 "GND" H 9800 6680 30  0001 C CNN
+F 2 "" H 9800 6750 60  0000 C CNN
+F 3 "" H 9800 6750 60  0000 C CNN
+	1    9800 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR027
+U 1 1 53689B21
+P 10000 6750
+F 0 "#PWR027" H 10000 6750 30  0001 C CNN
+F 1 "GND" H 10000 6680 30  0001 C CNN
+F 2 "" H 10000 6750 60  0000 C CNN
+F 3 "" H 10000 6750 60  0000 C CNN
+	1    10000 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 53689B27
+P 10200 6750
+F 0 "#PWR028" H 10200 6750 30  0001 C CNN
+F 1 "GND" H 10200 6680 30  0001 C CNN
+F 2 "" H 10200 6750 60  0000 C CNN
+F 3 "" H 10200 6750 60  0000 C CNN
+	1    10200 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 6650 10200 6750
+Wire Wire Line
+	10000 6650 10000 6750
+Wire Wire Line
+	9800 6650 9800 6750
+Wire Wire Line
+	9600 6650 9600 6750
+Text Notes 9550 6250 0    60   ~ 0
+Mounting holes
+Text Notes 1100 950  0    180  ~ 36
+FOX-1 Maximum Power Point Tracker
+Text Notes 8350 2250 0    120  ~ 24
+MPPT Telemetry
+Wire Notes Line
+	9350 6050 10450 6050
+Wire Notes Line
+	10450 6050 10450 6850
+Wire Notes Line
+	10450 6850 9350 6850
+Wire Notes Line
+	9350 6850 9350 6050
+Text Notes 600  7250 0    120  ~ 24
+NOTES
+Text Notes 600  7450 0    60   ~ 0
+* This MPPT implements a set-point constant voltage tracking algorithm based on panel temperature.\n* RIT MPPT Team: Brenton Salmi (KB1LQD), Bryce Salmi (KB1LQC), Ian MacKenzie (KB3OCF), Daniel Corriero.\n* NASA derating taken into account, not gauranteed
+Wire Bus Line
+	2950 3350 3450 3350
+Text Label 2950 3350 0    60   ~ 0
+BUS[1..60]
+Entry Wire Line
+	2850 3950 2950 3850
+Wire Bus Line
+	2950 3350 2950 3850
+Wire Wire Line
+	2850 3950 2400 3950
+Wire Wire Line
+	2400 3750 2850 3750
+Entry Wire Line
+	2850 3550 2950 3450
+Wire Wire Line
+	2850 3750 2850 3550
+Text Label 2450 3750 0    60   ~ 0
+BUS48
+Text Label 2450 3950 0    60   ~ 0
+BUS50
+Wire Bus Line
+	2950 4200 3450 4200
+Text Label 2950 4200 0    60   ~ 0
+BUS[1..60]
+Wire Bus Line
+	2950 4200 2950 4650
+Entry Wire Line
+	2850 4400 2950 4300
+Wire Wire Line
+	2850 4550 2850 4400
+Entry Wire Line
+	2850 4750 2950 4650
+Text Label 2450 4550 0    60   ~ 0
+BUS46
+Text Label 2450 4750 0    60   ~ 0
+BUS44
+Wire Wire Line
+	5050 1850 4550 1850
+Text Label 5050 1850 2    60   ~ 0
+BUS29
+Wire Wire Line
+	5050 2650 4550 2650
+Text Label 5050 2650 2    60   ~ 0
+BUS29
+Wire Wire Line
+	5050 3750 4550 3750
+Text Label 5050 3750 2    60   ~ 0
+BUS29
+Wire Wire Line
+	5050 4550 4550 4550
+Text Label 5050 4550 2    60   ~ 0
+BUS29
+Wire Wire Line
+	5050 5750 4550 5750
+Text Label 5050 5750 2    60   ~ 0
+BUS29
+Wire Wire Line
+	5050 6550 4550 6550
+Text Label 5050 6550 2    60   ~ 0
+BUS29
+Wire Bus Line
+	5150 1500 5750 1500
+Text Label 5750 1500 2    60   ~ 0
+BUS[1.60]
+Entry Wire Line
+	5050 1850 5150 1750
+Entry Wire Line
+	5050 2650 5150 2550
+Entry Wire Line
+	5050 3750 5150 3650
+Entry Wire Line
+	5050 4550 5150 4450
+Entry Wire Line
+	5050 5750 5150 5650
+Entry Wire Line
+	5050 6550 5150 6450
+Wire Bus Line
+	5150 1500 5150 6450
+Text Label 2800 2150 0    60   ~ 0
+Vpanel-0
+Text Label 2800 2950 0    60   ~ 0
+Vpanel-1
+Text Label 2800 4050 0    60   ~ 0
+Vpanel-2
+Text Label 2800 4850 0    60   ~ 0
+Vpanel-3
+Text Label 2800 6050 0    60   ~ 0
+Vpanel-4
+Text Label 2800 6850 0    60   ~ 0
+Vpanel-5
+Wire Wire Line
+	5900 2400 5450 2400
+Wire Wire Line
+	5900 2500 5450 2500
+Wire Wire Line
+	5900 2600 5450 2600
+Wire Wire Line
+	5900 2700 5450 2700
+Wire Wire Line
+	5900 2800 5450 2800
+Wire Wire Line
+	5900 2900 5450 2900
+Text Label 5450 2400 0    60   ~ 0
+Vpanel-0
+Text Label 5450 2500 0    60   ~ 0
+Vpanel-1
+Text Label 5450 2600 0    60   ~ 0
+Vpanel-2
+Text Label 5450 2700 0    60   ~ 0
+Vpanel-3
+Text Label 5450 2800 0    60   ~ 0
+Vpanel-4
+Text Label 5450 2900 0    60   ~ 0
+Vpanel-5
+Wire Wire Line
+	7650 2400 7200 2400
+Wire Wire Line
+	7650 2500 7200 2500
+Wire Wire Line
+	7650 2700 7200 2700
+Wire Wire Line
+	7650 2800 7200 2800
+Wire Wire Line
+	7650 2900 7200 2900
+Text Label 7650 2400 2    60   ~ 0
+ADC_0_0
+Wire Wire Line
+	7650 2600 7200 2600
+Text Label 7650 2500 2    60   ~ 0
+ADC_0_1
+Text Label 7650 2600 2    60   ~ 0
+ADC_0_2
+Text Label 7650 2700 2    60   ~ 0
+ADC_0_3
+Text Label 7650 2800 2    60   ~ 0
+ADC_0_4
+Text Label 7650 2900 2    60   ~ 0
+ADC_0_5
+$Sheet
+S 3550 5550 1000 600 
+U 534CE2A1
+F0 "MPPT_String_Z+" 50
+F1 "MPPT_String.sch" 50
+F2 "Vpanel+" U L 3550 6050 60 
+F3 "Vpanel-" U R 4550 6050 60 
+F4 "RTD+" U L 3550 5650 60 
+F5 "RTD-" U L 3550 5750 60 
+F6 "Vtemp" U R 4550 5650 60 
+F7 "~SolarSafe~" U R 4550 5750 60 
+F8 "MPPT-COMMON" O R 4550 5900 60 
+$EndSheet
+Text Notes 1500 3350 0    60   ~ 0
+BUS48 = +Y Antenna Sensor\nBUS50 = +Y Antenna Deploy
+Text Notes 1500 5200 0    60   ~ 0
+BUS46 = -Y Antenna Sensor\nBUS44 = -Y Antenna Deploy
+Text Label 5050 6450 2    60   ~ 0
+ADC_1_7
+Text Notes 7550 5400 0    60   ~ 0
+HIGH CURRENT = 1A RATED
+Text Notes 800  1550 0    60   ~ 12
+ALL SOLAR PANELS INPUTS MED. CURRENT = 0.5A RATED
+Text Notes 8700 4650 0    60   ~ 12
+VOUT MAX = 4.33V - RSENSE * IOUT
+Text Notes 500  2200 0    60   ~ 12
+VIN MAX = 6.5V
+Text Notes 500  2950 0    60   ~ 12
+VIN MAX = 6.5V
+Text Notes 500  4050 0    60   ~ 12
+VIN MAX = 6.5V
+Text Notes 500  4850 0    60   ~ 12
+VIN MAX = 6.5V
+Text Notes 500  5700 0    60   ~ 12
+VIN MAX = 6.5V
+Text Notes 500  6500 0    60   ~ 12
+VIN MAX = 6.5V
+Text Notes 5300 4850 0    60   ~ 0
+HIGH CURRENT = 1A RATED
+Wire Wire Line
+	7650 1100 7050 1100
+Text Label 7050 1100 0    60   ~ 0
+ADC_0_7
+Entry Wire Line
+	7650 1100 7750 1000
+Wire Wire Line
+	8650 1800 9250 1800
+Text Label 8650 1800 0    60   ~ 0
+ADC_1_0
+Entry Wire Line
+	9250 1800 9350 1700
+NoConn ~ 9200 1800
+NoConn ~ 7600 1100
+Connection ~ 5200 5250
+$Comp
+L AMSAT_LOGO_SMALL G1
+U 1 1 54EBE533
+P 5750 6450
+F 0 "G1" H 5750 6067 60  0001 C CNN
+F 1 "AMSAT_LOGO_SMALL" H 5750 6883 60  0001 C CNN
+F 2 "AMSAT_Logo_Small" H 5750 6450 60  0001 C CNN
+F 3 "" H 5750 6450 60  0000 C CNN
+	1    5750 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L RIT_LOGO_SMALL G2
+U 1 1 54EBE779
+P 6650 6450
+F 0 "G2" H 6650 6287 60  0001 C CNN
+F 1 "RIT_LOGO_SMALL" H 6650 6613 60  0001 C CNN
+F 2 "RIT_Logo_Small" H 6650 6450 60  0001 C CNN
+F 3 "~" H 6650 6450 60  0000 C CNN
+	1    6650 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FD2
+U 1 1 5655FD0A
+P 8650 6200
+F 0 "FD2" H 8650 6350 60  0000 C CNN
+F 1 "FIDUCIAL" H 8650 6050 60  0000 C CNN
+F 2 "FD1" H 8650 6200 60  0001 C CNN
+F 3 "~" H 8650 6200 60  0000 C CNN
+	1    8650 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FD1
+U 1 1 565600C8
+P 8200 6200
+F 0 "FD1" H 8200 6350 60  0000 C CNN
+F 1 "FIDUCIAL" H 8200 6050 60  0000 C CNN
+F 2 "FD1" H 8200 6200 60  0001 C CNN
+F 3 "~" H 8200 6200 60  0000 C CNN
+	1    8200 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FD3
+U 1 1 565600CE
+P 9100 6200
+F 0 "FD3" H 9100 6350 60  0000 C CNN
+F 1 "FIDUCIAL" H 9100 6050 60  0000 C CNN
+F 2 "FD1" H 9100 6200 60  0001 C CNN
+F 3 "~" H 9100 6200 60  0000 C CNN
+	1    9100 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FD5
+U 1 1 56561951
+P 8650 6650
+F 0 "FD5" H 8650 6800 60  0000 C CNN
+F 1 "FIDUCIAL" H 8650 6500 60  0000 C CNN
+F 2 "FD1" H 8650 6650 60  0001 C CNN
+F 3 "~" H 8650 6650 60  0000 C CNN
+	1    8650 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FD4
+U 1 1 56561957
+P 8200 6650
+F 0 "FD4" H 8200 6800 60  0000 C CNN
+F 1 "FIDUCIAL" H 8200 6500 60  0000 C CNN
+F 2 "FD1" H 8200 6650 60  0001 C CNN
+F 3 "~" H 8200 6650 60  0000 C CNN
+	1    8200 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FD6
+U 1 1 56561A1A
+P 9100 6650
+F 0 "FD6" H 9100 6800 60  0000 C CNN
+F 1 "FIDUCIAL" H 9100 6500 60  0000 C CNN
+F 2 "FD1" H 9100 6650 60  0001 C CNN
+F 3 "~" H 9100 6650 60  0000 C CNN
+	1    9100 6650
+	1    0    0    -1  
+$EndComp
+Text Notes 7350 6250 0    60   ~ 0
+Top Fiducials
+Text Notes 7200 6700 0    60   ~ 0
+Bottom Fiducials
+$EndSCHEMATC

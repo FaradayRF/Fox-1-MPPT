@@ -1,0 +1,593 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:KB1LQC
+LIBS:TL1451_MPPT_Flight_Rev1-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 37
+Title "Fox-1 Maximum Power Point Tracker"
+Date "30 nov 2015"
+Rev "2.0"
+Comp "The Radio Amateur Satellite Corporation"
+Comment1 "Bryce Salmi, KB1LQC"
+Comment2 "Brent Salmi, KB1LQD"
+Comment3 "Based on Rochester Institute of Technology P13271 Design"
+Comment4 ""
+$EndDescr
+$Comp
+L ADS7828 U5
+U 1 1 534B942A
+P 7150 3900
+F 0 "U5" H 6750 4625 50  0000 C CNN
+F 1 "ADS7828" H 6875 4550 50  0000 C CNN
+F 2 "PW16" H 6800 4475 50  0000 C CNN
+F 3 "" H 7150 3900 60  0000 C CNN
+	1    7150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C14
+U 1 1 534B9BF9
+P 2500 1200
+F 0 "C14" H 2600 1300 50  0000 L CNN
+F 1 "1uF" H 2600 1225 50  0000 L CNN
+F 2 "C0402" H 2725 1150 50  0000 C CNN
+F 3 "" H 2500 1200 60  0000 C CNN
+F 4 "16V" H 2675 1075 50  0000 C CNN "Rating"
+	1    2500 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR069
+U 1 1 534B9C09
+P 2500 1500
+F 0 "#PWR069" H 2500 1500 30  0001 C CNN
+F 1 "GND" H 2500 1430 30  0001 C CNN
+F 2 "" H 2500 1500 60  0000 C CNN
+F 3 "" H 2500 1500 60  0000 C CNN
+	1    2500 1500
+	1    0    0    -1  
+$EndComp
+Text HLabel 1550 900  0    60   Input ~ 0
+SP_+X_VSENSE
+Text HLabel 1550 1750 0    60   Input ~ 0
+SP_-X_VSENSE
+Text HLabel 1550 2600 0    60   Input ~ 0
+SP_+Y_VSENSE
+Text HLabel 1550 3550 0    60   Input ~ 0
+SP_-Y_VSENSE
+Text HLabel 1550 4450 0    60   Input ~ 0
+SP_+Z_VSENSE
+Text HLabel 1550 5400 0    60   Input ~ 0
+SP_-Z_VSENSE
+Text HLabel 1550 6400 0    60   Input ~ 0
+VMPPT
+Text HLabel 10200 3450 2    60   Input ~ 0
+SENSOR_POWER
+$Comp
+L GND #PWR070
+U 1 1 534BA52D
+P 9350 3950
+F 0 "#PWR070" H 9350 3950 30  0001 C CNN
+F 1 "GND" H 9350 3880 30  0001 C CNN
+F 2 "" H 9350 3950 60  0000 C CNN
+F 3 "" H 9350 3950 60  0000 C CNN
+	1    9350 3950
+	1    0    0    -1  
+$EndComp
+Text HLabel 8050 3750 2    60   Input ~ 0
+I2C_SCL
+Text HLabel 8050 3600 2    60   BiDi ~ 0
+I2C_SDA
+$Comp
+L GND #PWR071
+U 1 1 534BABD5
+P 7950 4850
+F 0 "#PWR071" H 7950 4850 30  0001 C CNN
+F 1 "GND" H 7950 4780 30  0001 C CNN
+F 2 "" H 7950 4850 60  0000 C CNN
+F 3 "" H 7950 4850 60  0000 C CNN
+	1    7950 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C15
+U 1 1 534BAC3B
+P 8800 3700
+F 0 "C15" H 8925 3775 50  0000 L CNN
+F 1 "0.1uF" H 8925 3700 50  0000 L CNN
+F 2 "C0402" H 9050 3625 50  0000 C CNN
+F 3 "" H 8800 3700 60  0000 C CNN
+F 4 "16V" H 9000 3550 50  0000 C CNN "Rating"
+	1    8800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR072
+U 1 1 534BAC41
+P 8800 3950
+F 0 "#PWR072" H 8800 3950 30  0001 C CNN
+F 1 "GND" H 8800 3880 30  0001 C CNN
+F 2 "" H 8800 3950 60  0000 C CNN
+F 3 "" H 8800 3950 60  0000 C CNN
+	1    8800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR073
+U 1 1 534BB38F
+P 6300 4850
+F 0 "#PWR073" H 6300 4850 30  0001 C CNN
+F 1 "GND" H 6300 4780 30  0001 C CNN
+F 2 "" H 6300 4850 60  0000 C CNN
+F 3 "" H 6300 4850 60  0000 C CNN
+	1    6300 4850
+	1    0    0    -1  
+$EndComp
+Text Notes 800  800  0    60   Italic 0
+VIN MAX = 2.42V @ 6.54V
+Text Notes 10275 3600 0    60   Italic 0
+VIN MAX = 3.0V
+Text Notes 8000 4350 0    60   Italic 0
+VREF  = INTERNAL 2.5V
+Text Notes 600  7325 0    120  ~ 24
+NOTES
+Text Notes 600  7525 0    60   ~ 0
+* This MPPT implements a set-point constant voltage tracking algorithm based on panel temperature.\n* RIT MPPT Team: Brenton Salmi (KB1LQD), Bryce Salmi (KB1LQC), Ian MacKenzie (KB3OCF), Daniel Corriero.\n* NASA derating taken into account, not gauranteed
+Text Notes 8050 3375 0    60   Italic 0
+I2C VMAX = 3V
+Text Notes 6250 5025 0    60   Italic 12
+Radiation Shield Required on ADS7828
+Text Notes 6650 4725 0    60   ~ 0
+I2C Address = 0x4A\nBinary = 1001010
+$Comp
+L R_US R30
+U 1 1 54C8A2AC
+P 2200 900
+F 0 "R30" V 2275 900 50  0000 C CNN
+F 1 "10K" V 2100 900 50  0000 C CNN
+F 2 "R0402" V 2025 900 50  0000 C CNN
+F 3 "" H 2200 900 50  0001 C CNN
+F 4 "0.1%" V 1950 900 50  0000 C CNN "Tolerance"
+	1    2200 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C78
+U 1 1 54C8A3BD
+P 2500 2050
+F 0 "C78" H 2600 2150 50  0000 L CNN
+F 1 "1uF" H 2600 2075 50  0000 L CNN
+F 2 "C0402" H 2725 2000 50  0000 C CNN
+F 3 "" H 2500 2050 60  0000 C CNN
+F 4 "16V" H 2675 1925 50  0000 C CNN "Rating"
+	1    2500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR074
+U 1 1 54C8A3C3
+P 2500 2350
+F 0 "#PWR074" H 2500 2350 30  0001 C CNN
+F 1 "GND" H 2500 2280 30  0001 C CNN
+F 2 "" H 2500 2350 60  0000 C CNN
+F 3 "" H 2500 2350 60  0000 C CNN
+	1    2500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R31
+U 1 1 54C8A3CD
+P 2200 1750
+F 0 "R31" V 2275 1750 50  0000 C CNN
+F 1 "10K" V 2100 1750 50  0000 C CNN
+F 2 "R0402" V 2025 1750 50  0000 C CNN
+F 3 "" H 2200 1750 50  0001 C CNN
+F 4 "0.1%" V 1950 1750 50  0000 C CNN "Tolerance"
+	1    2200 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C83
+U 1 1 54C8A3D4
+P 2500 2900
+F 0 "C83" H 2600 3000 50  0000 L CNN
+F 1 "1uF" H 2600 2925 50  0000 L CNN
+F 2 "C0402" H 2725 2850 50  0000 C CNN
+F 3 "" H 2500 2900 60  0000 C CNN
+F 4 "16V" H 2675 2775 50  0000 C CNN "Rating"
+	1    2500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR075
+U 1 1 54C8A3DA
+P 2500 3200
+F 0 "#PWR075" H 2500 3200 30  0001 C CNN
+F 1 "GND" H 2500 3130 30  0001 C CNN
+F 2 "" H 2500 3200 60  0000 C CNN
+F 3 "" H 2500 3200 60  0000 C CNN
+	1    2500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R32
+U 1 1 54C8A3E2
+P 2200 2600
+F 0 "R32" V 2275 2600 50  0000 C CNN
+F 1 "10K" V 2100 2600 50  0000 C CNN
+F 2 "R0402" V 2025 2600 50  0000 C CNN
+F 3 "" H 2200 2600 50  0001 C CNN
+F 4 "0.1%" V 1950 2600 50  0000 C CNN "Tolerance"
+	1    2200 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C88
+U 1 1 54C8A425
+P 2500 3850
+F 0 "C88" H 2600 3950 50  0000 L CNN
+F 1 "1uF" H 2600 3875 50  0000 L CNN
+F 2 "C0402" H 2725 3800 50  0000 C CNN
+F 3 "" H 2500 3850 60  0000 C CNN
+F 4 "16V" H 2675 3725 50  0000 C CNN "Rating"
+	1    2500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR076
+U 1 1 54C8A42B
+P 2500 4150
+F 0 "#PWR076" H 2500 4150 30  0001 C CNN
+F 1 "GND" H 2500 4080 30  0001 C CNN
+F 2 "" H 2500 4150 60  0000 C CNN
+F 3 "" H 2500 4150 60  0000 C CNN
+	1    2500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R33
+U 1 1 54C8A433
+P 2200 3550
+F 0 "R33" V 2275 3550 50  0000 C CNN
+F 1 "10K" V 2100 3550 50  0000 C CNN
+F 2 "R0402" V 2025 3550 50  0000 C CNN
+F 3 "" H 2200 3550 50  0001 C CNN
+F 4 "0.1%" V 1950 3550 50  0000 C CNN "Tolerance"
+	1    2200 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C89
+U 1 1 54C8A43A
+P 2500 4750
+F 0 "C89" H 2600 4850 50  0000 L CNN
+F 1 "1uF" H 2600 4775 50  0000 L CNN
+F 2 "C0402" H 2725 4700 50  0000 C CNN
+F 3 "" H 2500 4750 60  0000 C CNN
+F 4 "16V" H 2675 4625 50  0000 C CNN "Rating"
+	1    2500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR077
+U 1 1 54C8A440
+P 2500 5050
+F 0 "#PWR077" H 2500 5050 30  0001 C CNN
+F 1 "GND" H 2500 4980 30  0001 C CNN
+F 2 "" H 2500 5050 60  0000 C CNN
+F 3 "" H 2500 5050 60  0000 C CNN
+	1    2500 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R34
+U 1 1 54C8A448
+P 2200 4450
+F 0 "R34" V 2275 4450 50  0000 C CNN
+F 1 "10K" V 2100 4450 50  0000 C CNN
+F 2 "R0402" V 2025 4450 50  0000 C CNN
+F 3 "" H 2200 4450 50  0001 C CNN
+F 4 "0.1%" V 1950 4450 50  0000 C CNN "Tolerance"
+	1    2200 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C95
+U 1 1 54C8A44F
+P 2500 5700
+F 0 "C95" H 2600 5800 50  0000 L CNN
+F 1 "1uF" H 2600 5725 50  0000 L CNN
+F 2 "C0402" H 2725 5650 50  0000 C CNN
+F 3 "" H 2500 5700 60  0000 C CNN
+F 4 "16V" H 2675 5575 50  0000 C CNN "Rating"
+	1    2500 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR078
+U 1 1 54C8A455
+P 2500 6000
+F 0 "#PWR078" H 2500 6000 30  0001 C CNN
+F 1 "GND" H 2500 5930 30  0001 C CNN
+F 2 "" H 2500 6000 60  0000 C CNN
+F 3 "" H 2500 6000 60  0000 C CNN
+	1    2500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R35
+U 1 1 54C8A45D
+P 2200 5400
+F 0 "R35" V 2275 5400 50  0000 C CNN
+F 1 "10K" V 2100 5400 50  0000 C CNN
+F 2 "R0402" V 2025 5400 50  0000 C CNN
+F 3 "" H 2200 5400 50  0001 C CNN
+F 4 "0.1%" V 1950 5400 50  0000 C CNN "Tolerance"
+	1    2200 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C96
+U 1 1 54C8A464
+P 2500 6700
+F 0 "C96" H 2600 6800 50  0000 L CNN
+F 1 "1uF" H 2600 6725 50  0000 L CNN
+F 2 "C0402" H 2725 6650 50  0000 C CNN
+F 3 "" H 2500 6700 60  0000 C CNN
+F 4 "16V" H 2675 6575 50  0000 C CNN "Rating"
+	1    2500 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR079
+U 1 1 54C8A46A
+P 2500 7000
+F 0 "#PWR079" H 2500 7000 30  0001 C CNN
+F 1 "GND" H 2500 6930 30  0001 C CNN
+F 2 "" H 2500 7000 60  0000 C CNN
+F 3 "" H 2500 7000 60  0000 C CNN
+	1    2500 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R36
+U 1 1 54C8A472
+P 2200 6400
+F 0 "R36" V 2275 6400 50  0000 C CNN
+F 1 "10K" V 2100 6400 50  0000 C CNN
+F 2 "R0402" V 2025 6400 50  0000 C CNN
+F 3 "" H 2200 6400 50  0001 C CNN
+F 4 "0.1%" V 1950 6400 50  0000 C CNN "Tolerance"
+	1    2200 6400
+	0    -1   -1   0   
+$EndComp
+Text Notes 2050 6250 2    60   Italic 0
+VIN MAX = 2.402V @ 4.2V
+Text Notes 2750 850  0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 2750 1700 0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 2750 2550 0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 2750 3500 0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 2750 4400 0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 2750 5350 0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 2750 6350 0    60   Italic 0
+16 Hz Low Pass Filter
+Text Notes 9850 3200 0    60   ~ 0
+SEL PROTECTED TO 50mA\nFPF2001 ON IHU CARD
+$Comp
+L GND #PWR080
+U 1 1 534B9B88
+P 8150 4850
+F 0 "#PWR080" H 8150 4850 30  0001 C CNN
+F 1 "GND" H 8150 4780 30  0001 C CNN
+F 2 "" H 8150 4850 60  0000 C CNN
+F 3 "" H 8150 4850 60  0000 C CNN
+	1    8150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C12
+U 1 1 534B9B54
+P 8150 4600
+F 0 "C12" H 8250 4700 50  0000 L CNN
+F 1 "1uF" H 8250 4625 50  0000 L CNN
+F 2 "C0402" H 8375 4550 50  0000 C CNN
+F 3 "" H 8150 4600 60  0000 C CNN
+F 4 "16V" H 8325 4475 50  0000 C CNN "Rating"
+	1    8150 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1500 2500 1400
+Wire Wire Line
+	7850 3450 10200 3450
+Wire Wire Line
+	9350 3950 9350 3900
+Wire Wire Line
+	8050 3750 7850 3750
+Wire Wire Line
+	8050 3600 7850 3600
+Wire Wire Line
+	7850 3900 8550 3900
+Wire Wire Line
+	8550 3900 8550 3450
+Connection ~ 8550 3450
+Wire Wire Line
+	7850 4050 7950 4050
+Wire Wire Line
+	7950 4050 7950 4850
+Wire Wire Line
+	7950 4200 7850 4200
+Wire Wire Line
+	7950 4500 7850 4500
+Connection ~ 7950 4200
+Connection ~ 7950 4500
+Wire Wire Line
+	8800 3950 8800 3900
+Wire Wire Line
+	8800 3500 8800 3450
+Connection ~ 8800 3450
+Wire Wire Line
+	4400 3450 6400 3450
+Wire Wire Line
+	4400 900  4400 3450
+Wire Wire Line
+	4200 3600 6400 3600
+Wire Wire Line
+	4200 1750 4200 3600
+Wire Wire Line
+	4000 3750 6400 3750
+Wire Wire Line
+	3850 3900 6400 3900
+Wire Wire Line
+	3850 4050 6400 4050
+Wire Wire Line
+	4000 4200 6400 4200
+Wire Wire Line
+	6400 4350 4200 4350
+Wire Wire Line
+	6300 4500 6300 4850
+Wire Wire Line
+	6300 4500 6400 4500
+Wire Wire Line
+	2500 1000 2500 900 
+Connection ~ 2500 900 
+Wire Wire Line
+	1550 900  2000 900 
+Wire Wire Line
+	2500 2350 2500 2250
+Wire Wire Line
+	2500 3200 2500 3100
+Wire Wire Line
+	2500 4150 2500 4050
+Wire Wire Line
+	2500 5050 2500 4950
+Wire Wire Line
+	2500 6000 2500 5900
+Wire Wire Line
+	2500 7000 2500 6900
+Wire Wire Line
+	2400 900  4400 900 
+Wire Wire Line
+	2400 1750 4200 1750
+Wire Wire Line
+	2500 1850 2500 1750
+Connection ~ 2500 1750
+Wire Wire Line
+	2400 2600 4000 2600
+Wire Wire Line
+	2500 2600 2500 2700
+Connection ~ 2500 2600
+Wire Wire Line
+	2000 3550 1550 3550
+Wire Wire Line
+	2400 3550 3850 3550
+Wire Wire Line
+	2500 3650 2500 3550
+Connection ~ 2500 3550
+Wire Wire Line
+	2400 4450 3850 4450
+Wire Wire Line
+	2500 4450 2500 4550
+Connection ~ 2500 4450
+Wire Wire Line
+	2000 4450 1550 4450
+Wire Wire Line
+	2400 5400 4000 5400
+Wire Wire Line
+	2400 6400 4200 6400
+Wire Wire Line
+	4200 6400 4200 4350
+Wire Wire Line
+	2000 5400 1550 5400
+Wire Wire Line
+	2500 5400 2500 5500
+Connection ~ 2500 5400
+Wire Wire Line
+	2000 2600 1550 2600
+Wire Wire Line
+	2000 1750 1550 1750
+Wire Wire Line
+	2000 6400 1550 6400
+Wire Wire Line
+	2500 6500 2500 6400
+Connection ~ 2500 6400
+Wire Wire Line
+	8150 4850 8150 4800
+Wire Wire Line
+	7850 4350 8150 4350
+Wire Wire Line
+	8150 4350 8150 4400
+Wire Wire Line
+	4000 2600 4000 3750
+Wire Wire Line
+	3850 3550 3850 3900
+Wire Wire Line
+	3850 4450 3850 4050
+Wire Wire Line
+	4000 5400 4000 4200
+$Comp
+L C C13
+U 1 1 54C8BADF
+P 9350 3700
+F 0 "C13" H 9450 3800 50  0000 L CNN
+F 1 "1uF" H 9450 3725 50  0000 L CNN
+F 2 "C0603" H 9575 3650 50  0000 C CNN
+F 3 "" H 9350 3700 60  0000 C CNN
+F 4 "16V" H 9525 3575 50  0000 C CNN "Rating"
+	1    9350 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 3500 9350 3450
+Connection ~ 9350 3450
+Text Notes 800  1650 0    60   Italic 0
+VIN MAX = 2.42V @ 6.54V
+Text Notes 800  2500 0    60   Italic 0
+VIN MAX = 2.42V @ 6.54V
+Text Notes 800  3450 0    60   Italic 0
+VIN MAX = 2.42V @ 6.54V
+Text Notes 800  4350 0    60   Italic 0
+VIN MAX = 2.42V @ 6.54V
+Text Notes 800  5300 0    60   Italic 0
+VIN MAX = 2.42V @ 6.54V
+Text Notes 4500 950  0    60   ~ 0
+FAULT CURRENT = 6.5V LIMITED TO 320uA/CHANNEL WHEN ON\n
+$EndSCHEMATC

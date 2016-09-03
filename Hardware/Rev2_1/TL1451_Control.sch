@@ -1,0 +1,421 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:KB1LQC
+EELAYER 24 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title "Fox-1 Maximum Power Point Tracker"
+Date "11 Apr 2014"
+Rev "1"
+Comp "The Radio Amateur Satellite Corporation"
+Comment1 "Bryce Salmi, KB1LQC"
+Comment2 "Brent Salmi, KB1LQD"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TL1454A U?
+U 1 1 5347AA57
+P 6300 4550
+F 0 "U?" H 6300 5150 60  0000 C CNN
+F 1 "TL1454A" H 6300 3800 60  0000 C CNN
+F 2 "" H 6300 4550 60  0000 C CNN
+F 3 "" H 6300 4550 60  0000 C CNN
+	1    6300 4550
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5700 1300 1450 650 
+U 5347AA65
+F0 "Non-Synchronouse_SEPIC" 50
+F1 "SEPIC_Non-Synch.sch" 50
+F2 "Panel" I L 5700 1600 60 
+F3 "Output" O R 7150 1600 60 
+F4 "MOS_PWM" I L 5700 1800 60 
+$EndSheet
+Text HLabel 4100 4550 0    60   Input ~ 0
+Vtemp
+Text HLabel 1600 1600 0    60   Input ~ 0
+Vpanel
+Text HLabel 10100 1600 2    60   Output ~ 0
+Vbuckout
+Text HLabel 7450 4100 2    60   UnSpc ~ 0
+VREF
+Wire Wire Line
+	7000 4100 7450 4100
+Wire Wire Line
+	1600 1600 5700 1600
+Wire Wire Line
+	7150 1600 10100 1600
+$Comp
+L R_US R?
+U 1 1 5347B5EF
+P 2350 5100
+F 0 "R?" V 2430 5100 50  0000 C CNN
+F 1 "41.2K" V 2270 5100 50  0000 C CNN
+F 2 "" H 2350 5100 60  0000 C CNN
+F 3 "" H 2350 5100 60  0000 C CNN
+	1    2350 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R?
+U 1 1 5347B601
+P 2350 5700
+F 0 "R?" V 2430 5700 50  0000 C CNN
+F 1 "15.2K" V 2270 5700 50  0000 C CNN
+F 2 "" H 2350 5700 60  0000 C CNN
+F 3 "" H 2350 5700 60  0000 C CNN
+	1    2350 5700
+	1    0    0    -1  
+$EndComp
+Text HLabel 1900 5400 0    60   Input ~ 0
+Vlimit
+Wire Wire Line
+	2350 4900 2350 1600
+Connection ~ 2350 1600
+Wire Wire Line
+	1900 5400 4500 5400
+Wire Wire Line
+	2350 5300 2350 5500
+Connection ~ 2350 5400
+Wire Wire Line
+	2350 5900 2350 6050
+$Comp
+L GND #PWR?
+U 1 1 5347B682
+P 2350 6050
+F 0 "#PWR?" H 2350 6050 30  0001 C CNN
+F 1 "GND" H 2350 5980 30  0001 C CNN
+F 2 "" H 2350 6050 60  0000 C CNN
+F 3 "" H 2350 6050 60  0000 C CNN
+	1    2350 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5347B729
+P 4900 5100
+F 0 "#PWR?" H 4900 5100 30  0001 C CNN
+F 1 "GND" H 4900 5030 30  0001 C CNN
+F 2 "" H 4900 5100 60  0000 C CNN
+F 3 "" H 4900 5100 60  0000 C CNN
+	1    4900 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5100 4900 5000
+Wire Wire Line
+	4900 5000 5550 5000
+Wire Wire Line
+	7000 5000 7800 5000
+$Comp
+L VCC #PWR?
+U 1 1 5347B774
+P 7800 5000
+F 0 "#PWR?" H 7800 5100 30  0001 C CNN
+F 1 "VCC" H 7800 5100 30  0000 C CNN
+F 2 "" H 7800 5000 60  0000 C CNN
+F 3 "" H 7800 5000 60  0000 C CNN
+	1    7800 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5347B788
+P 7550 5250
+F 0 "C?" H 7550 5350 40  0000 L CNN
+F 1 "0.1uF" H 7556 5165 40  0000 L CNN
+F 2 "" H 7588 5100 30  0000 C CNN
+F 3 "" H 7550 5250 60  0000 C CNN
+	1    7550 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5050 7550 5000
+Connection ~ 7550 5000
+Wire Wire Line
+	7550 5450 7550 5550
+$Comp
+L GND #PWR?
+U 1 1 5347B7DA
+P 7550 5550
+F 0 "#PWR?" H 7550 5550 30  0001 C CNN
+F 1 "GND" H 7550 5480 30  0001 C CNN
+F 2 "" H 7550 5550 60  0000 C CNN
+F 3 "" H 7550 5550 60  0000 C CNN
+	1    7550 5550
+	1    0    0    -1  
+$EndComp
+Text Notes 5850 5550 0    60   ~ 0
+use PWM1 for SEPIC
+$Comp
+L C C?
+U 1 1 5347BC3C
+P 3050 4600
+F 0 "C?" H 3050 4700 40  0000 L CNN
+F 1 "120pF" H 3056 4515 40  0000 L CNN
+F 2 "" H 3088 4450 30  0000 C CNN
+F 3 "" H 3050 4600 60  0000 C CNN
+	1    3050 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R?
+U 1 1 5347BC50
+P 3450 4600
+F 0 "R?" V 3530 4600 50  0000 C CNN
+F 1 "10K" V 3370 4600 50  0000 C CNN
+F 2 "" H 3450 4600 60  0000 C CNN
+F 3 "" H 3450 4600 60  0000 C CNN
+	1    3450 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4250 3450 4250
+Wire Wire Line
+	3450 4250 3450 4400
+Wire Wire Line
+	3050 4400 3050 4100
+Wire Wire Line
+	3050 4100 5550 4100
+$Comp
+L GND #PWR?
+U 1 1 5347BCBF
+P 3450 4900
+F 0 "#PWR?" H 3450 4900 30  0001 C CNN
+F 1 "GND" H 3450 4830 30  0001 C CNN
+F 2 "" H 3450 4900 60  0000 C CNN
+F 3 "" H 3450 4900 60  0000 C CNN
+	1    3450 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5347BCD1
+P 3050 4900
+F 0 "#PWR?" H 3050 4900 30  0001 C CNN
+F 1 "GND" H 3050 4830 30  0001 C CNN
+F 2 "" H 3050 4900 60  0000 C CNN
+F 3 "" H 3050 4900 60  0000 C CNN
+	1    3050 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 4800 3050 4900
+Wire Wire Line
+	3450 4800 3450 4900
+$Comp
+L R_US R?
+U 1 1 5347BE62
+P 4500 4550
+F 0 "R?" V 4580 4550 50  0000 C CNN
+F 1 "10K" V 4420 4550 50  0000 C CNN
+F 2 "" H 4500 4550 60  0000 C CNN
+F 3 "" H 4500 4550 60  0000 C CNN
+	1    4500 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 4550 4300 4550
+Wire Wire Line
+	4700 4550 5550 4550
+Wire Wire Line
+	4500 5400 4500 4700
+Wire Wire Line
+	4500 4700 5550 4700
+Text Label 5050 4550 0    60   ~ 0
+INV
+Text Label 3350 6500 0    60   ~ 0
+INV
+$Comp
+L R_US R?
+U 1 1 5347C19B
+P 3800 6500
+F 0 "R?" V 3880 6500 50  0000 C CNN
+F 1 "R_US" V 3720 6500 50  0000 C CNN
+F 2 "" H 3800 6500 60  0000 C CNN
+F 3 "" H 3800 6500 60  0000 C CNN
+	1    3800 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R_US R?
+U 1 1 5347C1AD
+P 4100 6850
+F 0 "R?" V 4180 6850 50  0000 C CNN
+F 1 "R_US" V 4020 6850 50  0000 C CNN
+F 2 "" H 4100 6850 60  0000 C CNN
+F 3 "" H 4100 6850 60  0000 C CNN
+	1    4100 6850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C?
+U 1 1 5347C1BF
+P 4400 6500
+F 0 "C?" H 4400 6600 40  0000 L CNN
+F 1 "C" H 4406 6415 40  0000 L CNN
+F 2 "" H 4438 6350 30  0000 C CNN
+F 3 "" H 4400 6500 60  0000 C CNN
+	1    4400 6500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 6500 3600 6500
+Wire Wire Line
+	3600 6500 3600 6850
+Wire Wire Line
+	3600 6850 3900 6850
+Wire Wire Line
+	4300 6850 4600 6850
+Wire Wire Line
+	4600 6850 4600 6500
+Wire Wire Line
+	4600 6500 4700 6500
+Wire Wire Line
+	4200 6500 4000 6500
+Wire Wire Line
+	4700 6500 4700 4850
+Wire Wire Line
+	4700 4850 5550 4850
+NoConn ~ 7000 4250
+NoConn ~ 7000 4400
+NoConn ~ 7000 4550
+NoConn ~ 7000 4750
+NoConn ~ 7000 4850
+NoConn ~ 7000 5150
+Wire Wire Line
+	5550 5150 5050 5150
+Text Label 5050 5150 0    60   ~ 0
+PWM
+Text Label 5300 1800 0    60   ~ 0
+PWM
+Wire Wire Line
+	5300 1800 5700 1800
+Text Notes 7200 4350 0    60   ~ 0
+What do I attach to SCP?\nI don't want to use it.
+Wire Wire Line
+	5050 4400 5550 4400
+Text Label 5050 4400 0    60   ~ 0
+DTC1
+Text Label 10350 4200 2    60   ~ 0
+DTC1
+Text Label 7150 4100 0    60   ~ 0
+VREF
+Text Label 9850 3500 0    60   ~ 0
+VREF
+$Comp
+L R_US R?
+U 1 1 5347EB64
+P 10100 3900
+F 0 "R?" V 10180 3900 50  0000 C CNN
+F 1 "R_US" V 10020 3900 50  0000 C CNN
+F 2 "" H 10100 3900 60  0000 C CNN
+F 3 "" H 10100 3900 60  0000 C CNN
+	1    10100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R?
+U 1 1 5347EB78
+P 9800 4500
+F 0 "R?" V 9880 4500 50  0000 C CNN
+F 1 "R_US" V 9720 4500 50  0000 C CNN
+F 2 "" H 9800 4500 60  0000 C CNN
+F 3 "" H 9800 4500 60  0000 C CNN
+	1    9800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5347EB8C
+P 9800 3900
+F 0 "C?" H 9800 4000 40  0000 L CNN
+F 1 "C" H 9806 3815 40  0000 L CNN
+F 2 "" H 9838 3750 30  0000 C CNN
+F 3 "" H 9800 3900 60  0000 C CNN
+	1    9800 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 3700 9800 3500
+Wire Wire Line
+	9800 3500 10100 3500
+Wire Wire Line
+	10100 3500 10100 3700
+Wire Wire Line
+	10100 4100 10100 4200
+Wire Wire Line
+	9800 4200 10350 4200
+Wire Wire Line
+	9800 4100 9800 4300
+Connection ~ 9800 4200
+Wire Wire Line
+	9800 4700 9800 4800
+$Comp
+L GND #PWR?
+U 1 1 5347ED22
+P 9800 4800
+F 0 "#PWR?" H 9800 4800 30  0001 C CNN
+F 1 "GND" H 9800 4730 30  0001 C CNN
+F 2 "" H 9800 4800 60  0000 C CNN
+F 3 "" H 9800 4800 60  0000 C CNN
+	1    9800 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 10100 4200
+Wire Notes Line
+	9400 3200 10600 3200
+Wire Notes Line
+	10600 3200 10600 5100
+Wire Notes Line
+	10600 5100 9400 5100
+Wire Notes Line
+	9400 5100 9400 3200
+Text Notes 9500 3150 0    60   ~ 0
+Softstart & Deadtime
+Text Notes 3100 4000 0    60   ~ 0
+500KHz
+Text Notes 3400 7200 0    60   ~ 0
+Error Amplifier Compensation
+Wire Notes Line
+	3200 7100 4900 7100
+Wire Notes Line
+	4900 7100 4900 6300
+Wire Notes Line
+	4900 6300 3200 6300
+Wire Notes Line
+	3200 6300 3200 7100
+$EndSCHEMATC

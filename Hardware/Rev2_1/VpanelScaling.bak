@@ -1,0 +1,346 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:KB1LQC
+LIBS:TL1451_MPPT_Flight_Rev1-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 37
+Title ""
+Date "30 nov 2015"
+Rev "2.0"
+Comp "The Radio Amateur Satellite Corporation"
+Comment1 "Bryce Salmi, KB1LQC"
+Comment2 "Brent Salmi, KB1LQD"
+Comment3 "Based on Rochester Institute of Technology P13271 Design"
+Comment4 ""
+$EndDescr
+$Comp
+L R_US R201
+U 1 1 54696542
+P 2450 3750
+F 0 "R201" H 2325 3800 50  0000 C CNN
+F 1 "51.1K" H 2300 3725 50  0000 C CNN
+F 2 "R0402" H 2300 3650 50  0000 C CNN
+F 3 "" H 2450 3750 60  0000 C CNN
+F 4 "0.1%" H 2325 3575 50  0000 C CNN "Tolerance"
+	1    2450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R202
+U 1 1 54696551
+P 2450 4300
+F 0 "R202" H 2300 4350 50  0000 C CNN
+F 1 "30.1K" H 2300 4275 50  0000 C CNN
+F 2 "R0402" H 2275 4200 50  0000 C CNN
+F 3 "" H 2450 4300 60  0000 C CNN
+F 4 "0.1%" H 2300 4125 50  0000 C CNN "Tolerance"
+	1    2450 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR095
+U 1 1 54696EED
+P 2450 4600
+F 0 "#PWR095" H 2450 4600 30  0001 C CNN
+F 1 "GND" H 2450 4530 30  0001 C CNN
+F 2 "" H 2450 4600 60  0000 C CNN
+F 3 "~" H 2450 4600 60  0000 C CNN
+	1    2450 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4500 2450 4600
+Wire Wire Line
+	2450 3950 2450 4100
+Wire Wire Line
+	2450 3550 2450 3000
+$Comp
+L R_US R203
+U 1 1 54696F01
+P 3700 3750
+F 0 "R203" H 3550 3825 50  0000 C CNN
+F 1 "51.1K" H 3550 3750 50  0000 C CNN
+F 2 "R0402" H 3525 3675 50  0000 C CNN
+F 3 "" H 3700 3750 60  0000 C CNN
+F 4 "0.1%" H 3575 3600 50  0000 C CNN "Tolerance"
+	1    3700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R204
+U 1 1 54696F07
+P 3700 4300
+F 0 "R204" H 3575 4375 50  0000 C CNN
+F 1 "30.1K" H 3550 4300 50  0000 C CNN
+F 2 "R0402" H 3550 4225 50  0000 C CNN
+F 3 "" H 3700 4300 50  0000 C CNN
+F 4 "0.1%" H 3575 4150 50  0000 C CNN "Tolerance"
+	1    3700 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR096
+U 1 1 54696F0D
+P 3700 4600
+F 0 "#PWR096" H 3700 4600 30  0001 C CNN
+F 1 "GND" H 3700 4530 30  0001 C CNN
+F 2 "" H 3700 4600 60  0000 C CNN
+F 3 "~" H 3700 4600 60  0000 C CNN
+	1    3700 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4500 3700 4600
+Wire Wire Line
+	3700 3950 3700 4100
+Wire Wire Line
+	3700 3550 3700 3000
+$Comp
+L R_US R205
+U 1 1 54696F16
+P 4850 3750
+F 0 "R205" H 4700 3825 50  0000 C CNN
+F 1 "51.1K" H 4700 3750 50  0000 C CNN
+F 2 "R0402" H 4675 3675 50  0000 C CNN
+F 3 "" H 4850 3750 60  0000 C CNN
+F 4 "0.1%" H 4725 3600 50  0000 C CNN "Tolerance"
+	1    4850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R206
+U 1 1 54696F1C
+P 4850 4300
+F 0 "R206" H 4700 4350 50  0000 C CNN
+F 1 "30.1K" H 4700 4275 50  0000 C CNN
+F 2 "R0402" H 4675 4200 50  0000 C CNN
+F 3 "" H 4850 4300 50  0000 C CNN
+F 4 "0.1%" H 4725 4125 50  0000 C CNN "Tolerance"
+	1    4850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR097
+U 1 1 54696F22
+P 4850 4600
+F 0 "#PWR097" H 4850 4600 30  0001 C CNN
+F 1 "GND" H 4850 4530 30  0001 C CNN
+F 2 "" H 4850 4600 60  0000 C CNN
+F 3 "~" H 4850 4600 60  0000 C CNN
+	1    4850 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4500 4850 4600
+Wire Wire Line
+	4850 3950 4850 4100
+Wire Wire Line
+	4850 3550 4850 3000
+$Comp
+L R_US R207
+U 1 1 54696F2B
+P 6225 3750
+F 0 "R207" H 6100 3850 50  0000 C CNN
+F 1 "51.1K" H 6075 3775 50  0000 C CNN
+F 2 "R0402" H 6075 3700 50  0000 C CNN
+F 3 "" H 6225 3750 50  0001 C CNN
+F 4 "0.1%" H 6100 3625 50  0000 C CNN "Tolerance"
+	1    6225 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R208
+U 1 1 54696F31
+P 6225 4300
+F 0 "R208" H 6075 4375 50  0000 C CNN
+F 1 "30.1K" H 6075 4300 50  0000 C CNN
+F 2 "R0402" H 6050 4225 50  0000 C CNN
+F 3 "" H 6225 4300 60  0000 C CNN
+F 4 "0.1%" H 6100 4150 50  0000 C CNN "Tolerance"
+	1    6225 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR098
+U 1 1 54696F37
+P 6225 4600
+F 0 "#PWR098" H 6225 4600 30  0001 C CNN
+F 1 "GND" H 6225 4530 30  0001 C CNN
+F 2 "" H 6225 4600 60  0000 C CNN
+F 3 "~" H 6225 4600 60  0000 C CNN
+	1    6225 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6225 4500 6225 4600
+Wire Wire Line
+	6225 3950 6225 4100
+Wire Wire Line
+	6225 3550 6225 3000
+$Comp
+L R_US R209
+U 1 1 54696F40
+P 7600 3750
+F 0 "R209" H 7450 3825 50  0000 C CNN
+F 1 "51.1K" H 7400 3750 50  0000 C CNN
+F 2 "R0402" H 7425 3675 50  0000 C CNN
+F 3 "" H 7600 3750 60  0000 C CNN
+F 4 "0.1%" H 7450 3600 50  0000 C CNN "Tolerance"
+	1    7600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R210
+U 1 1 54696F46
+P 7600 4300
+F 0 "R210" H 7450 4400 50  0000 C CNN
+F 1 "30.1K" H 7425 4325 50  0000 C CNN
+F 2 "R0402" H 7425 4250 50  0000 C CNN
+F 3 "" H 7600 4300 60  0000 C CNN
+F 4 "0.1%" H 7450 4175 50  0000 C CNN "Tolerance"
+	1    7600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR099
+U 1 1 54696F4C
+P 7600 4600
+F 0 "#PWR099" H 7600 4600 30  0001 C CNN
+F 1 "GND" H 7600 4530 30  0001 C CNN
+F 2 "" H 7600 4600 60  0000 C CNN
+F 3 "~" H 7600 4600 60  0000 C CNN
+	1    7600 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4500 7600 4600
+Wire Wire Line
+	7600 3950 7600 4100
+Wire Wire Line
+	7600 3550 7600 3000
+$Comp
+L R_US R211
+U 1 1 54696F55
+P 8550 3750
+F 0 "R211" H 8400 3825 50  0000 C CNN
+F 1 "51.1K" H 8400 3750 50  0000 C CNN
+F 2 "R0402" H 8375 3675 50  0000 C CNN
+F 3 "" H 8550 3750 60  0000 C CNN
+F 4 "0.1%" H 8425 3600 50  0000 C CNN "Tolerance"
+	1    8550 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_US R212
+U 1 1 54696F5B
+P 8550 4300
+F 0 "R212" H 8400 4400 50  0000 C CNN
+F 1 "30.1K" H 8400 4325 50  0000 C CNN
+F 2 "R0402" H 8375 4250 50  0000 C CNN
+F 3 "" H 8550 4300 60  0000 C CNN
+F 4 "0.1%" H 8425 4175 50  0000 C CNN "Tolerance"
+	1    8550 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0100
+U 1 1 54696F61
+P 8550 4600
+F 0 "#PWR0100" H 8550 4600 30  0001 C CNN
+F 1 "GND" H 8550 4530 30  0001 C CNN
+F 2 "" H 8550 4600 60  0000 C CNN
+F 3 "~" H 8550 4600 60  0000 C CNN
+	1    8550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4500 8550 4600
+Wire Wire Line
+	8550 3950 8550 4100
+Wire Wire Line
+	8550 3550 8550 3000
+Text HLabel 3700 3000 1    60   Input ~ 0
+Vpanel-X
+Text HLabel 2450 3000 1    60   Input ~ 0
+Vpanel+X
+Text HLabel 4850 3000 1    60   Input ~ 0
+Vpanel+Y
+Text HLabel 6225 3000 1    60   Input ~ 0
+Vpanel-Y
+Text HLabel 7600 3000 1    60   Input ~ 0
+Vpanel+Z
+Text HLabel 8550 3000 1    60   Input ~ 0
+Vpanel-Z
+Text HLabel 2600 4025 2    60   Output ~ 0
+Vsense+X
+Text HLabel 5000 4025 2    60   Output ~ 0
+Vsense+Y
+Text HLabel 3850 4025 2    60   Output ~ 0
+Vsense-X
+Text HLabel 6375 4025 2    60   Output ~ 0
+Vsense-Y
+Text HLabel 7750 4025 2    60   Output ~ 0
+Vsense+Z
+Text HLabel 8700 4025 2    60   Output ~ 0
+Vsense-Z
+Wire Wire Line
+	4850 4025 5000 4025
+Wire Wire Line
+	8550 4025 8700 4025
+Wire Wire Line
+	7600 4025 7750 4025
+Wire Wire Line
+	6225 4025 6375 4025
+Wire Wire Line
+	3700 4025 3850 4025
+Wire Wire Line
+	2450 4025 2600 4025
+Connection ~ 8550 4025
+Connection ~ 7600 4025
+Connection ~ 6225 4025
+Connection ~ 4850 4025
+Connection ~ 3700 4025
+Connection ~ 2450 4025
+Text Notes 9500 4050 0    60   Italic 0
+VOUT MAX = 2.409V
+Text Notes 5275 2375 0    60   Italic 0
+VIN MAX = 6.5V
+Text Notes 3975 2175 0    120  Italic 24
+PANEL VOLTAGE TELEMETRY ADC SCALING
+Text Notes 625  7025 0    120  ~ 24
+NOTES
+Text Notes 625  7225 0    60   ~ 0
+* This MPPT implements a set-point constant voltage tracking algorithm based on panel temperature.\n* RIT MPPT Team: Brenton Salmi (KB1LQD), Bryce Salmi (KB1LQC), Ian MacKenzie (KB3OCF), Daniel Corriero.\n* NASA derating taken into account, not gauranteed
+$EndSCHEMATC
