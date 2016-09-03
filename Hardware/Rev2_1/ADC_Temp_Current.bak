@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 10 37
 Title "Fox-1 Maximum Power Point Tracker"
-Date "30 nov 2015"
+Date "3 sep 2016"
 Rev "2.0"
 Comp "The Radio Amateur Satellite Corporation"
 Comment1 "Bryce Salmi, KB1LQC"
