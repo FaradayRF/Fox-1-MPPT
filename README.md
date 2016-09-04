@@ -10,7 +10,7 @@ The Fox-1 Maximum Power Point Tracker utilizes analog computing to track the sol
 Revision 1.2 boards are Revision 1 PCB's with BOM modifications necessary for correct operation. This included stacking some capacitors ontop of feedback resistors in the RTD circuit for stability. Revision 1 PCB's are green soldermask in color. Revision 2 PCB's were created to adress these issues better and properly mount all parts with correct footprints and adress some other manufacturing needs. These boards are use a blue soldermask and the design files for the Rev 2.1 boards have been uploaded to this Github repository.
 
 #History
-This project began as a [Rochester Institue of Technology](http://downloads.kicad-pcb.org/archive/KiCad_stable-2013.07.07-BZR4022_Win_full_version.exe) Multi-disciplinary Senior Design (MSD) project during the 2012-2013 school year. Originally the [P13271 AMSAT-MPPT](http://edge.rit.edu/edge/P13271/public/Home) project which successfully delivered a proof-of-concept MPPT intended for a 3U cubesat, the design was continued and modified for use on the smaller Fox-1 satellites which are 1U in size.
+This project began as a [Rochester Institue of Technology](http://www.rit.edu) Multi-disciplinary Senior Design (MSD) project during the 2012-2013 school year. Originally the [P13271 AMSAT-MPPT](http://edge.rit.edu/edge/P13271/public/Home) project which successfully delivered a proof-of-concept MPPT intended for a 3U cubesat, the design was continued and modified for use on the smaller Fox-1 satellites which are 1U in size.
 
 #Flights
 The Revision 1.2 and Revision 2.1 Maximum Power Point Trackers are currently slated to fly on several launches to Low Earth Orbit with more launches being sought after. These flights are accurate as of 9/3/2016.
