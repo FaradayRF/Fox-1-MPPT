@@ -31,7 +31,7 @@ Bryce Salmi @kb1lqc and Brenton Salmi @kb1lqd out of appreciation if used verbat
 
 2) FaradayRF has no affiliation with the Radio Amateur Satellite Corporation (AMSAT).
 Bryce Salmi and Brenton Salmi helped take the RIT senior design project P13271 with
-contributions from teammembers Bryce Salmi, Brenton Salmi, Ian MacKenzie, and Daniel Corriero
+contributions from team members Bryce Salmi, Brenton Salmi, Ian MacKenzie, and Daniel Corriero
 to a state of completion capable to be launched into orbit. AMSAT released the design into
 the Public Domain via the AMSAT 2015 Symposium Proceedings (print). FaradayRF is a company
 founded by Bryce Salmi and Brenton Salmi as a collection of our engineering efforts including
