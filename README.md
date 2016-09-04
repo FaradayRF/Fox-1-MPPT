@@ -12,6 +12,15 @@ Revision 1.2 boards are Revision 1 PCB's with BOM modifications necessary for co
 #History
 This project began as a [Rochester Institue of Technology](http://downloads.kicad-pcb.org/archive/KiCad_stable-2013.07.07-BZR4022_Win_full_version.exe) Multi-disciplinary Senior Design (MSD) project during the 2012-2013 school year. Originally the [P13271 AMSAT-MPPT](http://edge.rit.edu/edge/P13271/public/Home) project which successfully delivered a proof-of-concept MPPT intended for a 3U cubesat, the design was continued and modified for use on the smaller Fox-1 satellites which are 1U in size.
 
+##Original Team
+The original RIT team to create this MPPT included
+* Bryce Salmi, KB1LQC
+* Brenton Salmi, KB1LQD
+* Ian MacKenzi, KB3OCF
+* Daniel Corriero
+
+Work was performed over two years between 2013 and 2015 by Bryce Salmi and Brenton Salmi to bring the design to flight status from the P13271 project as seen here.
+
 #Flights
 The Revision 1.2 and Revision 2.1 Maximum Power Point Trackers are currently slated to fly on several launches to Low Earth Orbit with more launches being sought after. These flights are accurate as of 9/3/2016.
 
