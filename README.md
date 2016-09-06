@@ -1,7 +1,7 @@
 # Fox-1-MPPT
 This repository contains the Public Domain files of the [Radio Amateur Satellite Corporation](http://www.amsat.org) (AMSAT) Fox-1 satellite Maximum Power Point Tracker. This is a PCBA flying on the Fox-1 series of 1U cubesats which optimizes the power extracted from the six solar panels on the spacecraft using analog computing.
 
-![AMSAT Fox-1 MPPT](/images/mpptrev2_1500w_LowRes.jpg)
+![AMSAT Fox-1 MPPT](https://github.com/FaradayRF/Fox-1-MPPT/blob/master/images/Fox-1_MPPT_Rev2_LowRes.jpg)
 
 #Overview
 
@@ -9,8 +9,19 @@ The Fox-1 Maximum Power Point Tracker utilizes analog computing to track the sol
 
 Revision 1.2 boards are Revision 1 PCB's with BOM modifications necessary for correct operation. This included stacking some capacitors ontop of feedback resistors in the RTD circuit for stability. Revision 1 PCB's are green soldermask in color. Revision 2 PCB's were created to adress these issues better and properly mount all parts with correct footprints and adress some other manufacturing needs. These boards are use a blue soldermask and the design files for the Rev 2.1 boards have been uploaded to this Github repository.
 
+[READ THE FOX-1 MPPT TECHNICAL OVERVIEW TO UNDERSTAND THE PROJECT!](https://github.com/FaradayRF/Fox-1-MPPT/blob/master/Documents/Fox-1_MaximumPowerPointTracker.pdf)
+
 #History
 This project began as a [Rochester Institue of Technology](http://downloads.kicad-pcb.org/archive/KiCad_stable-2013.07.07-BZR4022_Win_full_version.exe) Multi-disciplinary Senior Design (MSD) project during the 2012-2013 school year. Originally the [P13271 AMSAT-MPPT](http://edge.rit.edu/edge/P13271/public/Home) project which successfully delivered a proof-of-concept MPPT intended for a 3U cubesat, the design was continued and modified for use on the smaller Fox-1 satellites which are 1U in size.
+
+##Original Team
+The original RIT team to create this MPPT included
+* Bryce Salmi, KB1LQC
+* Brenton Salmi, KB1LQD
+* Ian MacKenzi, KB3OCF
+* Daniel Corriero
+
+Work was performed over two years between 2013 and 2015 by Bryce Salmi and Brenton Salmi to bring the design to flight status from the P13271 project as seen here.
 
 #Flights
 The Revision 1.2 and Revision 2.1 Maximum Power Point Trackers are currently slated to fly on several launches to Low Earth Orbit with more launches being sought after. These flights are accurate as of 9/3/2016.
