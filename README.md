@@ -30,7 +30,10 @@ The Revision 1.2 and Revision 2.1 Maximum Power Point Trackers are currently sla
 Two MPPTs will fly aboard two cubesats on the same launch. These satellites are Fox-1Cliff and Fox-1D which are being sent up on the Spaceflight SHERPA payload on a [SpaceX Falcon 9](http://www.spacex.com/falcon9). Estimated launch date is late 2016 or early 2017.
 
 ###Fox-1B "RadFxSat"
-One MPPT will be flying on the Fox-1B cubesat set to launch aboard a [Virgin Galactic Launcher One](http://www.virgingalactic.com/satellite-launch/) in Late 2017.
+One MPPT will be flying on the Fox-1B cubesat set to launch aboard a ULA [Delta II](http://www.ulalaunch.com/Products_DeltaII.aspx) rocket on March 16th, 2017.
+
+###Fox-1E "RadFxSat-2"
+One MPPT will be flying on the Fox-1E cubesat set to launch aboard a [Virgin Galactic Launcher One](http://www.virgingalactic.com/satellite-launch/) in December, 2017.
 
 #Project Structure
 ##Hardware Files
