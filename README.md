@@ -12,7 +12,7 @@ Revision 1.2 boards are Revision 1 PCB's with BOM modifications necessary for co
 [READ THE FOX-1 MPPT TECHNICAL OVERVIEW TO UNDERSTAND THE PROJECT!](https://github.com/FaradayRF/Fox-1-MPPT/blob/master/Documents/Fox-1_MaximumPowerPointTracker.pdf)
 
 # History
-This project began as a [Rochester Institue of Technology](http://downloads.kicad-pcb.org/archive/KiCad_stable-2013.07.07-BZR4022_Win_full_version.exe) Multi-disciplinary Senior Design (MSD) project during the 2012-2013 school year. Originally the [P13271 AMSAT-MPPT](http://edge.rit.edu/edge/P13271/public/Home) project which successfully delivered a proof-of-concept MPPT intended for a 3U cubesat, the design was continued and modified for use on the smaller Fox-1 satellites which are 1U in size.
+This project began as a [Rochester Institute of Technology](https://www.rit.edu/) Multi-disciplinary Senior Design (MSD) project during the 2012-2013 school year. Originally the [P13271 AMSAT-MPPT](http://edge.rit.edu/edge/P13271/public/Home) project which successfully delivered a proof-of-concept MPPT intended for a 3U cubesat, the design was continued and modified for use on the smaller Fox-1 satellites which are 1U in size.
 
 ## Original Team
 The original RIT team to create this MPPT included
@@ -37,7 +37,7 @@ One MPPT will be flying on the Fox-1E cubesat set to launch aboard a [Virgin Gal
 
 # Project Structure
 ## Hardware Files
-All hardware files are located in the [Hardware/Rev2_1](https://github.com/FaradayRF/Fox-1-MPPT/tree/master/Hardware/Rev2_1) directory. They consist of [Kicad EDA](http://kicad-pcb.org/) files which were developed using [Kicad Build: 2013-07-07 BZR 4022](http://downloads.kicad-pcb.org/archive/KiCad_stable-2013.07.07-BZR4022_Win_full_version.exe) which is the July 2013 stable version of the EDA tool (Windows). Also placed into the hardware directory are the [project output files](https://github.com/FaradayRF/Fox-1-MPPT/tree/master/Hardware/Rev2_1/OutputFiles). These are the files which were used to order the PCBs and present an easy to use view of the design (PDF, Excel, Gerber, etc).
+All hardware files are located in the [Hardware/Rev2_1](https://github.com/FaradayRF/Fox-1-MPPT/tree/master/Hardware/Rev2_1) directory. They consist of [Kicad EDA](http://kicad.org/) files which were developed using [Kicad Build: 2013-07-07 BZR 4022]https://downloads.kicad.org/kicad/windows/explore/stable) which is the July 2013 stable version of the EDA tool (Windows). Also placed into the hardware directory are the [project output files](https://github.com/FaradayRF/Fox-1-MPPT/tree/master/Hardware/Rev2_1/OutputFiles). These are the files which were used to order the PCBs and present an easy to use view of the design (PDF, Excel, Gerber, etc).
 
 **Notable Documents**
 * [MPPT Schematic PDF Export](https://github.com/FaradayRF/Fox-1-MPPT/blob/master/Hardware/Rev2_1/OutputFiles/TL1451_MPPT_Flight_Rev2_BW.pdf)
